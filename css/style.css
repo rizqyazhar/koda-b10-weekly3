@@ -54,7 +54,7 @@ body {
   background-color: var(--color-bg-secondary);
 }
 
-.padding-container {
+.padding-block {
   padding: 0 100px;
 }
 
