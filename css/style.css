@@ -51,13 +51,14 @@
 
 body {
   width: 100%;
-  min-height: 100dvh;
   background-color: var(--color-bg-secondary);
 }
 
 .padding-inline {
   padding: 0 100px;
 }
+
+/* NAVBAR */
 
 .navbar {
   width: 100%;
@@ -87,15 +88,34 @@ body {
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
 .nav-links a {
   font-size: 14px;
   text-decoration: none;
-  font-weight: 500;
   font-family: var(--font-publicSans);
+}
+
+.inactive-state {
+  font-weight: 500;
   color: var(--color-font-secondary);
+  background-color: inherit;
+}
+
+.active-state {
+  font-weight: 600;
+}
+
+.capsul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 13px;
+  border-radius: 20px;
+  color: var(--color-font-quaternary);
+  background-color: var(--color-bg-primary);
 }
 
 .buttons-box {
@@ -134,12 +154,19 @@ body {
   border: 1px solid var(--color-border-secondary);
 }
 
+/* NAVBAR */
+
+/* MAIN */
+
 .main {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-block: 100px;
+  min-height: 100dvh;
 }
+
+/* HERO */
 
 .hero-section {
   display: flex;
@@ -147,10 +174,36 @@ body {
   gap: 28px;
 }
 
+.hero-section-two {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.eyebrow-heading {
+  text-transform: uppercase;
+  font-family: var(--font-ibmPlexMono);
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--color-font-tertiary);
+  letter-spacing: 1.1px;
+  margin-bottom: 1px;
+}
+
 .hero-text-box {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.hero-text-box-two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-text-box-two > p {
+  font-size: 14px;
 }
 
 .title {
@@ -177,7 +230,8 @@ body {
   font-size: 17px;
 }
 
-.hero-text-box > p > span {
+.hero-text-box > p > span,
+.hero-text-box-two > p > span {
   display: block;
 }
 
@@ -206,6 +260,31 @@ body {
   font-size: 12px;
   font-weight: 400;
   color: var(--color-font-tertiary);
+}
+
+.pill-switch {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 26px;
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-tertiary);
+  font-family: var(--font-publicSans);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.pill-switch div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-inline: 11px;
+}
+
+.pill-switch-box {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .hero-data-reports p {
