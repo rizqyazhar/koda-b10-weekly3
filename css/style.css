@@ -136,6 +136,11 @@ button {
 .main {
   display: flex;
   flex-direction: column;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
   gap: 28px;
   padding-block: 100px 38px;
 }
