@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --font-primary: "Fraunces", serif;
-  --font-secondary: "Public Sans", sans-serif;
-  --font-tertiary: "IBM Plex Mono", monospace;
+  --font-fraunces: "Fraunces", serif;
+  --font-publicSans: "Public Sans", sans-serif;
+  --font-ibmPlexMono: "IBM Plex Mono", monospace;
 
   --color-bg-primary: rgba(15, 107, 79, 1);
   --color-bg-secondary: rgba(247, 242, 231, 1);
@@ -12,7 +12,7 @@
 
   --color-font-primary: rgba(19, 35, 27, 1);
   --color-font-secondary: rgba(76, 91, 82, 1);
-  --color-font-secondary: rgba(132, 146, 138, 1);
+  --color-font-tersiary: rgba(132, 146, 138, 1);
   --color-font-quaternary: rgba(255, 255, 255, 1);
 
   --color-border-primary: rgba(232, 224, 209, 1);
@@ -38,4 +38,90 @@
 
   --color-bg-closed: rgba(244, 239, 228, 1);
   --color-border-closed: rgba(232, 224, 209, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var(--color-bg-secondary);
+}
+
+.padding-container {
+  padding: 0 100px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border-secondary);
+  background-color: var(--color-bg-tertiary);
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-box a {
+  font-family: var(--font-fraunces);
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--color-font-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-publicSans);
+  color: var(--color-font-secondary);
+}
+
+.buttons-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.button-primary {
+  background-color: var(--color-bg-primary);
+  color: var(--color-font-quaternary);
+}
+
+.button-secondary {
+  background-color: inherit;
+  color: var(--color-font-secondary);
 }
