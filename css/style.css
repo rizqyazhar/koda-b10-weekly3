@@ -12,7 +12,7 @@
 
   --color-font-primary: rgba(19, 35, 27, 1);
   --color-font-secondary: rgba(76, 91, 82, 1);
-  --color-font-tersiary: rgba(132, 146, 138, 1);
+  --color-font-tertiary: rgba(132, 146, 138, 1);
   --color-font-quaternary: rgba(255, 255, 255, 1);
 
   --color-border-primary: rgba(232, 224, 209, 1);
@@ -114,6 +114,7 @@ button {
   border-radius: 16px;
   font-size: 12px;
   font-weight: 600;
+  font-family: var(--font-publicSans);
 }
 
 .button-primary {
@@ -124,4 +125,88 @@ button {
 .button-secondary {
   background-color: inherit;
   color: var(--color-font-secondary);
+}
+
+.button-tertiary {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-font-primary);
+  border: 1px solid var(--color-border-secondary);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-block: 100px 38px;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-text-box > h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--color-font-primary);
+  font-family: var(--font-fraunces);
+}
+
+.hero-text-box > h1 > span {
+  display: block;
+}
+
+.hero-text-box > p {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-font-secondary);
+  font-family: var(--font-publicSans);
+}
+
+.hero-text-box > p > span {
+  display: block;
+}
+
+.hero-button-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-button-box > button {
+  padding: 14px 24px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hero-data-reports {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ibmPlexMono);
+}
+
+.middle-dot {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-font-tertiary);
+}
+
+.hero-data-reports p {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-font-secondary);
+}
+
+.hero-data-reports p > span {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-font-resolved);
+}
+
+.hero-data-reports p:nth-child(1) > span {
+  color: var(--color-font-primary);
 }
