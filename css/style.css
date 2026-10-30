@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-primary: "Fraunces", serif;
+  --font-secondary: "Public Sans", sans-serif;
+  --font-tertiary: "IBM Plex Mono", monospace;
+
+  --color-bg-primary: rgba(15, 107, 79, 1);
+  --color-bg-secondary: rgba(247, 242, 231, 1);
+  --color-bg-tertiary: rgba(255, 253, 248, 1);
+  --color-bg-quaternary: rgba(230, 242, 235, 1);
+
+  --color-font-primary: rgba(19, 35, 27, 1);
+  --color-font-secondary: rgba(76, 91, 82, 1);
+  --color-font-secondary: rgba(132, 146, 138, 1);
+  --color-font-quaternary: rgba(255, 255, 255, 1);
+
+  --color-border-primary: rgba(232, 224, 209, 1);
+  --color-border-secondary: rgba(215, 203, 182, 1);
+
+  --color-border-inreview: rgba(150, 104, 15, 0.25);
+  --color-font-inreview: rgba(150, 104, 15, 1);
+  --color-bg-inreview: rgba(251, 241, 216, 1);
+
+  --color-border-assigned: rgba(47, 96, 126, 0.25);
+  --color-font-assigned: rgba(47, 96, 126, 1);
+  --color-bg-assigned: rgba(232, 241, 245, 1);
+
+  --color-border-resolved: rgba(33, 122, 81, 0.25);
+  --color-font-resolved: rgba(33, 122, 81, 1);
+  --color-bg-resolved: rgba(229, 243, 234, 1);
+
+  --color-bg-submitted: rgba(244, 239, 228, 1);
+
+  --color-font-warning: rgba(163, 63, 49, 1);
+  --color-bg-warning: rgba(249, 234, 229, 1);
+  --color-border-warning: rgba(163, 63, 49, 0.28);
+
+  --color-bg-closed: rgba(244, 239, 228, 1);
+  --color-border-closed: rgba(232, 224, 209, 1);
+}
