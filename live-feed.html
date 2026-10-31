@@ -52,46 +52,402 @@
           </div>
         </div>
       </section>
-      <section class="filter-section">
-        <label for="search-filter-input" class="search-filter-input-label">
-          <div class="search-icon"></div>
-          <input
-            id="search-filter-input"
-            class="search-filter-input"
-            type="text"
-            placeholder="Search by street name, complaint ID, or keyword..." />
-        </label>
-        <div class="chips-filter">
-          <div class="chips chips-active">
-            <span>All Issues (6)</span>
+      <section class="feed-section">
+        <div class="filter-section">
+          <label for="search-filter-input" class="search-filter-input-label">
+            <div class="search-icon"></div>
+            <input
+              id="search-filter-input"
+              class="search-filter-input"
+              type="text"
+              placeholder="Search by street name, complaint ID, or keyword..." />
+          </label>
+          <div class="chips-filter">
+            <div class="chips chips-active">
+              <span>All Issues (6)</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="road-icon"></div>
+              <span>Roads & Transit</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="water-icon"></div>
+              <span>Water & Sewage</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="sun-icon"></div>
+              <span>Street Lighting</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="trash-icon"></div>
+              <span>Sanitation & Waste</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="trees-icon"></div>
+              <span>Public Parks & Trees</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="speaker-icon"></div>
+              <span>Noise & Disturbance</span>
+            </div>
+            <div class="chips chips-inactive">
+              <div class="building-icon"></div>
+              <span>Building & Zoning</span>
+            </div>
           </div>
-          <div class="chips chips-inactive">
-            <div class="road-icon"></div>
-            <span>Roads & Transit</span>
+        </div>
+        <div class="feed-content-box">
+          <div class="feed-content-filter">
+            <div class="status-filter">
+              <span>Status:</span>
+              <button class="status-filter-button status-filter-active">
+                All
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Submitted
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Received
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                In review
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Assigned
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Awaiting your info
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Resolved
+              </button>
+              <button class="status-filter-button status-filter-inactive">
+                Closed
+              </button>
+            </div>
+            <label for="with-photo-filter" class="with-photo-filter-label">
+              <input
+                type="checkbox"
+                name="with-photo-filter"
+                id="with-photo-filter"
+                class="with-photo-filter" />
+              With photos/proof only
+            </label>
           </div>
-          <div class="chips chips-inactive">
-            <div class="water-icon"></div>
-            <span>Water & Sewage</span>
-          </div>
-          <div class="chips chips-inactive">
-            <div class="sun-icon"></div>
-            <span>Street Lighting</span>
-          </div>
-          <div class="chips chips-inactive">
-            <div class="trash-icon"></div>
-            <span>Sanitation & Waste</span>
-          </div>
-          <div class="chips chips-inactive">
-            <div class="trees-icon"></div>
-            <span>Public Parks & Trees</span>
-          </div>
-          <div class="chips chips-inactive">
-            <div class="speaker-icon"></div>
-            <span>Noise & Disturbance</span>
-          </div>
-          <div class="chips chips-inactive">
-            <div class="building-icon"></div>
-            <span>Building & Zoning</span>
+          <div class="feed-content-lists">
+            <div>
+              <div class="long-card">
+                <div class="img-long-card-box">
+                  <img src="/img/img/img-1.jpg" alt="img-1" />
+                </div>
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag inreview-tag">
+                      <img src="/img/icons/search-icon.svg" alt="search-icon" />
+                      In review
+                    </span>
+                    <span class="note-text">CMP-2026-8841</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Perumda PAM JAYA (Clean Drinking Water)</span
+                    >
+                  </div>
+                  <p class="title">
+                    PAM clean drinking water pipeline burst flooding sidewalk in
+                    front of Cipete Raya MRT
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Water & Sewage</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    148
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    2 proof
+                  </span>
+                  <span class="report-date">Oct 29</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="long-card">
+                <div class="img-long-card-box">
+                  <img src="/img/img/img-2.jpg" alt="img-2" />
+                </div>
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag assigned-tag">
+                      <img
+                        src="/img/icons/asigned-icon.svg"
+                        alt="asigned-icon" />
+                      Assigned
+                    </span>
+                    <span class="note-text">CMP-2026-8819</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Dinas Bina Marga DKI Jakarta (Roads & Sidewalks)</span
+                    >
+                  </div>
+                  <p class="title">
+                    Severe 15cm asphalt cavity in TransJakarta corridor causing
+                    motorbike rim damage
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur
+                      TransJakarta)
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Roads & Transit</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    92
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    1 proof
+                  </span>
+                  <span class="report-date">Oct 28</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="long-card">
+                <div class="img-long-card-box">
+                  <img src="/img/img/img-3.jpg" alt="img-3" />
+                </div>
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag resolved-tag">
+                      <img src="/img/icons/check-icon.svg" alt="check-icon" />
+                      Resolved
+                    </span>
+                    <span class="note-text">CMP-2026-8794</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Dinas Perhubungan DKI Jakarta (PJU & Traffic)</span
+                    >
+                  </div>
+                  <p class="title">
+                    Complete PJU streetlight outage spanning 300 meters along
+                    residential corridor
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Street Lighting</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like button-disabled" disabled>
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    64
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    1 proof
+                  </span>
+                  <span class="report-date">Oct 28</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="long-card">
+                <div class="img-long-card-box">
+                  <img src="/img/img/img-4.jpg" alt="img-4" />
+                </div>
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag inreview-tag">
+                      <img src="/img/icons/search-icon.svg" alt="search-icon" />
+                      In review
+                    </span>
+                    <span class="note-text">CMP-2026-8720</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Dinas Lingkungan Hidup DKI Jakarta (Waste & Rivers)</span
+                    >
+                  </div>
+                  <p class="title">
+                    Illegal household trash accumulation obstructing drainage at
+                    Kali Krukut Kemang
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Kampung Kemang, RT 02 / RW 01 (bantara Kali Krukut)
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Sanitation & Waste</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    78
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    1 proof
+                  </span>
+                  <span class="report-date">Oct 29</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="long-card">
+                <div class="img-long-card-box">
+                  <img src="/img/img/img-5.png" alt="img-5" />
+                </div>
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag assigned-tag">
+                      <img
+                        src="/img/icons/asigned-icon.svg"
+                        alt="asigned-icon" />
+                      Assigned
+                    </span>
+                    <span class="note-text">CMP-2026-8650</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Dinas Pertamanan dan Hutan Kota DKI Jakarta</span
+                    >
+                  </div>
+                  <p class="title">
+                    Hazardous decayed Trembesi tree limb at risk of collapse
+                    over walking path
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Taman Suropati (sisi timur, dekat patung ASEAN)
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Public Parks & Trees</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    45
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    2 proof
+                  </span>
+                  <span class="report-date">Oct 28</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="long-card">
+                <!-- <div class="img-long-card-box">
+                  <img src="/img/img/img-1.jpg" alt="img-1" />
+                </div> -->
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag submitted-tag">
+                      <img src="/img/icons/time-icon.svg" alt="time-icon" />
+                      Submitted
+                    </span>
+                    <span class="note-text">CMP-2026-8601</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >Satpol PP Provinsi DKI Jakarta (Public Order)</span
+                    >
+                  </div>
+                  <p class="title">
+                    Heavy excavation equipment operating past 22:00 WIB in
+                    residential alley
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      Jl. Senopati No. 18, RT 06 / RW 02
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">Noise & Disturbance</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    39
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    1 proof
+                  </span>
+                  <span class="report-date">Oct 29</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
