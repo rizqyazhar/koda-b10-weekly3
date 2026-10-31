@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track | WargaReport</title>
+    <link rel="icon" type="image/x-icon" href="/img/icons/logo.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="navbar padding-inline">
+      <div class="logo-box">
+        <img src="/img/icons/logo.svg" alt="web-logo" />
+        <a href="/index.html">WargaReport</a>
+      </div>
+      <nav class="nav-links">
+        <a href="/live-feed.html" class="inactive-state">Live Feed</a>
+        <a href="/track.html" class="active-state capsul">Track</a>
+        <a href="/how-it-works.html" class="inactive-state">How it works</a>
+      </nav>
+      <div class="buttons-box">
+        <button class="button button-secondary">
+          <img src="/img/icons/login-icon.svg" alt="/login-icon" />
+          Sign In
+        </button>
+        <button class="button button-primary">
+          <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
+          Report
+        </button>
+      </div>
+    </header>
+    <main class="main padding-inline">
+      <section class="left-side-grow">
+        <div class="form-card">
+          <div class="form-card-title">
+            <span class="eyebrow-heading">Citizen Portal</span>
+            <h1 class="title">Track your complaint</h1>
+            <p class="description">
+              Enter your official case reference number to view real-time triage
+              progress, <span>inspector assignment, and official replies.</span>
+            </p>
+          </div>
+          <form>
+            <label for="complaint-reference-id-input" class="form-label"
+              ><span>Complaint Reference ID *</span>
+              <input
+                id="complaint-reference-id-input"
+                type="text"
+                placeholder="e.g. CMP-2026-8841"
+                class="form-input" />
+            </label>
+            <label for="account-verification-input" class="form-label"
+              ><span>Email address or phone (optional verification)</span>
+              <input
+                id="account-verification-input"
+                type="email"
+                placeholder="citizen@example.com"
+                class="form-input" />
+            </label>
+            <button class="button button-primary">
+              <div class="search-icon-quaternary"></div>
+              Lookup report status
+              <img src="/img/icons/arrow-right-white.svg" alt="camera-icon" />
+            </button>
+          </form>
+          <div>
+            <p>Try a sample record:</p>
+            <span>CMP-2026-8841</span>
+            <span class="middle-dot">&#xb7;</span
+            ><span> CMP-2026-8794 (Resolved) </span>
+          </div>
+        </div>
+        <div class="tracking-info-box">
+          <div>
+            <div>
+              <div class="help-icon"></div>
+            </div>
+            <div>
+              <p>
+                Your tracking ID was displayed on your confirmation receipt and
+                sent to your registered email address immediately upon intake.
+              </p>
+              <p>
+                Reports filed anonymously can only be tracked using this unique
+                key; officers cannot retrieve records by name without it.
+              </p>
+            </div>
+          </div>
+          <div>
+            <a href=""
+              >Lost your tracking ID? Search recent reports by location
+              &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer padding-inline">
+      <div class="footer-content">
+        <div class="about-website">
+          <a href="index.html" class="title">WargaReport</a>
+          <p class="description">
+            WargaReport is an independent civic reporting platform for municipal
+            infrastructure issues across Indonesia. Residents submit evidence,
+            follow SLA countdowns, and track resolution updates from the
+            responsible agencies.
+          </p>
+          <p class="warning-message">
+            Not for life-threatening emergencies — call 112 (National Emergency
+            Call Center) or BPBD DKI directly.
+          </p>
+        </div>
+        <div class="footer-navlink">
+          <div>
+            <p class="footer-nav-title">Citizens</p>
+            <a class="description">File a report</a>
+            <a class="description">Track complaint</a>
+            <a class="description">Public reports registry</a>
+            <a class="description">My filing history</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Agencies</p>
+            <a class="description">Participating bureaus</a>
+            <a class="description">Officer triage queue</a>
+            <a class="description">SLA benchmarks</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Civic Trust</p>
+            <a class="description">Help & FAQs</a>
+            <a class="description">Evidence guidelines</a>
+            <a class="description">PII & redaction policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-box">
+        <p class="copyright-text">
+          &copy; 2026 WargaReport. All rights reserved.
+        </p>
+        <p class="statute-text">UU No. 25/2009 Compliant</p>
+      </div>
+    </footer>
+  </body>
+</html>
