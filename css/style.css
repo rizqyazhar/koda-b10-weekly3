@@ -162,8 +162,9 @@ body {
 
 .navbar {
   width: 100%;
-  position: fixed;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,7 +269,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  padding-block: 100px;
+  padding-block: 40px;
   min-height: 50dvh;
 }
 
@@ -283,7 +284,6 @@ body {
 .hero-section-two {
   display: flex;
   justify-content: space-between;
-  padding-block: 10px;
 }
 
 .eyebrow-heading {
