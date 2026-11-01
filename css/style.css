@@ -58,8 +58,16 @@ body {
   padding: 0 100px;
 }
 
+.padding-b-130 {
+  padding-bottom: 130px;
+}
+
 .gap-30 {
   gap: 30px;
+}
+
+.font-size-16 {
+  font-size: 16px;
 }
 
 /* START ICONS */
@@ -565,16 +573,11 @@ body {
   font-size: 11px;
 }
 
-.inreview-tag {
+.inreview-tag,
+.awaiting-tag {
   border: 1px solid var(--color-border-inreview);
   background-color: var(--color-bg-inreview);
   color: var(--color-font-inreview);
-}
-
-.resolved-tag {
-  border: 1px solid var(--color-border-resolved);
-  background-color: var(--color-bg-resolved);
-  color: var(--color-font-resolved);
 }
 
 .assigned-tag {
@@ -587,6 +590,24 @@ body {
   border: 1px solid var(--color-border-primary);
   background-color: var(--color-bg-closed);
   color: var(--color-font-secondary);
+}
+
+.received-tag {
+  border: 1px solid var(--color-border-tertiary);
+  background-color: var(--color-bg-quaternary);
+  color: var(--color-bg-primary);
+}
+
+.resolved-tag {
+  border: 1px solid var(--color-border-resolved);
+  background-color: var(--color-bg-resolved);
+  color: var(--color-font-resolved);
+}
+
+.closed-tag {
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-closed);
+  color: var(--color-font-tertiary);
 }
 
 .note-text {
@@ -883,12 +904,13 @@ input[type="checkbox"] {
 }
 
 .left-side-grow {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: 32px;
 }
 
 .form-card {
-  flex: 1;
+  grid-column: 1 / 8;
   display: flex;
   flex-direction: column;
   gap: 23px;
@@ -975,7 +997,7 @@ input[type="checkbox"] {
 }
 
 .tracking-info-box {
-  width: 40%;
+  grid-column: 8 / 13;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1011,9 +1033,10 @@ input[type="checkbox"] {
 }
 
 .accordion-box {
+  grid-column: 1 / 8;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .accordion {
@@ -1040,14 +1063,14 @@ input[type="checkbox"] {
 .accordion-header > div {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 }
 
 .accordion-content {
-  padding: 16px 38px 16px 18px;
+  padding: 15px 38px 22px 18px;
   font-family: var(--font-publicSans);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-font-secondary);
   border-top: 1px solid var(--color-border-primary);
 }
@@ -1064,6 +1087,98 @@ input[type="checkbox"] {
   font-weight: 600;
   color: var(--color-font-primary);
   font-family: var(--font-publicSans);
+}
+
+.side-content {
+  grid-column: 8 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.status-meaning-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 23px;
+  border-radius: 12px;
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-primary);
+}
+
+.status-meaning-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-meaning-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-meaning-list > span {
+  width: fit-content;
+}
+
+.status-meaning-list > p {
+  flex: 1;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: var(--font-publicSans);
+  color: var(--color-font-secondary);
+}
+
+.emergency-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 21px;
+  border-radius: 16px;
+  background-color: var(--color-bg-warning);
+  border: 1px solid var(--color-border-warning);
+}
+
+.emergency-card div:nth-child(1),
+.emergency-card > p {
+  font-family: var(--font-publicSans);
+}
+
+.emergency-card div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-font-warning);
+}
+
+.emergency-card > p {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-font-secondary);
+}
+
+.emergency-card div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emergency-card div:nth-child(3) button {
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 10px;
+  border: 1px solid var(--color-border-warning);
+  font-family: var(--font-ibmPlexMono);
+  color: var(--color-font-warning);
+  background-color: var(--color-bg-tertiary);
 }
 
 /* END MAIN */
