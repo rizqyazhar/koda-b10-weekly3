@@ -92,6 +92,31 @@ a {
   mask: url("/img/icons/eye-icon.svg") no-repeat center;
   mask-size: cover;
 }
+
+.profile-icon {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-font-tertiary);
+  mask: url("/img/icons/profile-icon.svg") no-repeat center;
+  mask-size: cover;
+}
+
+.lock-icon {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-font-tertiary);
+  mask: url("/img/icons/lock-icon.svg") no-repeat center;
+  mask-size: cover;
+}
+
+.check-icon {
+  width: 13px;
+  height: 13px;
+  background-color: var(--color-font-quaternary);
+  mask: url("/img/icons/check-icon.svg") no-repeat center;
+  mask-size: cover;
+}
+
 .search-icon {
   width: 15px;
   height: 15px;
@@ -284,7 +309,13 @@ body.modal-open {
   gap: 12px;
 }
 
-.modal-content > form > button {
+.input-2-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.modal-content > form > a {
   width: 100%;
   display: flex;
   align-items: center;
@@ -323,22 +354,22 @@ body.modal-open {
   color: var(--color-font-secondary);
 }
 
-.input-box {
+.input-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.email-input-label {
+.input-label {
   width: fit-content;
 }
 
-.email-input-label > span.eyebrow-heading {
+.input-label > span.eyebrow-heading {
   font-size: 10px;
   color: var(--color-font-secondary);
 }
 
-.email-input-box {
+.input-box {
   width: 100%;
   display: flex;
   align-items: center;
@@ -348,19 +379,19 @@ body.modal-open {
   border: 1px solid var(--color-border-secondary);
 }
 
-.email-input-box:nth-child(2) div:nth-child(2) {
+.input-box:nth-child(2) div:nth-child(2) {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.email-input-box:focus-within {
+.input-box:focus-within {
   border: 1px solid var(--color-font-secondary);
   box-shadow: 0px 0px 0px 2px rgba(15, 107, 79, 0.13);
 }
 
-.email-input {
+.input {
   width: 100%;
   border: none;
   outline: none;
@@ -368,6 +399,17 @@ body.modal-open {
   font-size: 13px;
   color: var(--color-font-tertiary);
   font-family: var(--font-publicSans);
+}
+
+#nik-input {
+  font-family: var(--font-ibmPlexMono);
+}
+
+.small {
+  font-family: var(--font-publicSans);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--color-font-tertiary);
 }
 
 /* END MODAL */
