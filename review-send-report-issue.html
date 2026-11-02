@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report an issue | WargaReport</title>
+    <link rel="icon" type="image/x-icon" href="/img/icons/logo.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="navbar padding-inline">
+      <div class="logo-box">
+        <img src="/img/icons/logo.svg" alt="web-logo" />
+        <a href="/index.html">WargaReport</a>
+      </div>
+      <nav class="nav-links">
+        <a href="/live-feed.html" class="inactive-state">Live Feed</a>
+        <a href="/track.html" class="inactive-state">Track</a>
+        <a href="/help.html" class="inactive-state">How it works</a>
+        <a href="/myreports.html" class="inactive-state">My Reports</a>
+      </nav>
+      <div class="buttons-box">
+        <div class="notif-icon-box">
+          <div class="notif-icon"></div>
+          <div class="green-circle"></div>
+        </div>
+        <div class="user-info-toggle">
+          <div class="user-photo">FS</div>
+          <div class="user-info">
+            <span>Fahrul Septiana</span>
+            <span>citizen</span>
+          </div>
+          <div class="chevron-down-icon"></div>
+        </div>
+        <button class="button button-primary">
+          <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
+          Report an issue
+        </button>
+      </div>
+    </header>
+    <main class="main padding-inline">
+      <div class="side-grow">
+        <aside class="aside">
+          <div>
+            <span class="eyebrow-heading">Community Intake</span>
+            <h1 class="title">Report an Issue</h1>
+            <p class="description">
+              Public civic reporting for Indonesian municipal services.
+            </p>
+          </div>
+          <div class="aside-navlink-container">
+            <a href="topic-report-issue.html">
+              <span>01</span>
+              <div>
+                <span>Topic</span>
+                <img src="/img/icons/checklist-icon.svg" alt="checklist-icon" />
+              </div>
+            </a>
+            <a href="location-report-issue.html">
+              <span>02</span>
+              <div>
+                <span>Location</span>
+                <img src="/img/icons/checklist-icon.svg" alt="checklist-icon" />
+              </div>
+            </a>
+            <a href="proof-report-issue.html">
+              <span>03</span>
+              <div>
+                <span>Proof</span>
+                <img src="/img/icons/checklist-icon.svg" alt="checklist-icon" />
+              </div>
+            </a>
+            <a href="review-send-report-issue.html" class="active-state">
+              <span>04</span> Review & Send
+            </a>
+          </div>
+          <div class="aside-message-container">
+            <div>
+              <div class="shield-icon">a</div>
+              <p>Independent Verification</p>
+            </div>
+            <p>
+              Our verification desk checks each report and routes it to the
+              municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP,
+              Citata). Resolution timestamps are tracked publicly.
+            </p>
+          </div>
+          <a>Cancel and return to feed</a>
+        </aside>
+        <section class="report-card">
+          <div class="report-header">
+            <span class="eyebrow-heading">Step 04 of 04</span>
+            <h2 class="title">Report summary & declaration</h2>
+            <p class="description">
+              Review the report and choose notifications before final
+              submission.
+            </p>
+          </div>
+          <form>
+            <div class="input-container">
+              <label for="report-title-input" class="input-label">
+                <span class="eyebrow-heading">Concise Title *</span>
+              </label>
+              <div class="input-box">
+                <input
+                  id="report-title-input"
+                  class="input"
+                  type="text"
+                  placeholder="Pohon tumbang di depan Kebun Binatang samping Kampus ITB" />
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="report-textarea-input" class="report-textarea-label">
+                <span class="eyebrow-heading"
+                  >Incident Observation Details *</span
+                >
+                <span>100 chars (min 15)</span>
+              </label>
+              <textarea
+                name="report-textarea-input"
+                id="report-textarea-input"
+                class="report-textarea-input">
+Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon 
+untuk diperhatikan
+              </textarea>
+            </div>
+            <div class="post-anonym-check-box">
+              <div class="lock-icon"></div>
+              <div>
+                <label
+                  for="anonym-checkbox-input"
+                  class="anonym-checkbox-label">
+                  Post anonymously on public feed
+                  <span>
+                    Your name will be masked as Warga Anonim on open records.
+                  </span>
+                </label>
+                <input
+                  type="checkbox"
+                  name="anonym-checkbox-input"
+                  id="anonym-checkbox-input"
+                  class="anonym-checkbox-input" />
+              </div>
+            </div>
+            <div class="input-2-column">
+              <div class="input-container">
+                <label for="filername-input" class="input-label">
+                  <span class="eyebrow-heading">Filer Name *</span>
+                </label>
+                <div class="input-box">
+                  <input
+                    id="filername-input"
+                    class="input"
+                    type="text"
+                    placeholder="Fahrul Septiana" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="email-input" class="input-label">
+                  <span class="eyebrow-heading">Email for Status Alerts *</span>
+                </label>
+                <div class="input-box">
+                  <input
+                    id="email-input"
+                    class="input"
+                    type="email"
+                    placeholder="fahrul@wargareport.id" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="contact-input" class="input-label">
+                  <span class="eyebrow-heading">Phone / WhatsApp</span>
+                </label>
+                <div class="input-box">
+                  <input
+                    id="contact-input"
+                    class="input"
+                    type="text"
+                    placeholder="+62 812-9842-1054" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="email-alert-status" class="input-label">
+                  <span class="eyebrow-heading">Status alert channels</span>
+                </label>
+                <div class="alert-status-checkbox">
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="email-alert-status"
+                      id="email-alert-status"
+                      class="checkbox-input-shape" />
+                    <label for="email-alert-status">Email</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="sms-alert-status"
+                      id="sms-alert-status"
+                      class="checkbox-input-shape" />
+                    <label for="sms-alert-status">SMS</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-policy-box">
+              <input
+                type="checkbox"
+                name="confirm-policy"
+                id="confirm-policy" />
+              <label for="confirm-policy" class="confirm-policy-label"
+                >I confirm this incident was authentically observed on-site
+                under Law No. 25/2009.</label
+              >
+            </div>
+          </form>
+          <div class="report-submit-button">
+            <a href="/topic-report-issue.html">Cancel</a>
+            <a href="/report-receipt.html" class="active-state"
+              >Dispatch Report
+              <span
+                ><img
+                  src="/img/icons/arrow-right-white.svg"
+                  alt="arrow-right-white-icon"
+              /></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer padding-inline">
+      <div class="footer-content">
+        <div class="about-website">
+          <a href="index.html" class="title">WargaReport</a>
+          <p class="description">
+            WargaReport is an independent civic reporting platform for municipal
+            infrastructure issues across Indonesia. Residents submit evidence,
+            follow SLA countdowns, and track resolution updates from the
+            responsible agencies.
+          </p>
+          <p class="warning-message">
+            Not for life-threatening emergencies — call 112 (National Emergency
+            Call Center) or BPBD DKI directly.
+          </p>
+        </div>
+        <div class="footer-navlink">
+          <div>
+            <p class="footer-nav-title">Citizens</p>
+            <a class="description">File a report</a>
+            <a class="description">Track complaint</a>
+            <a class="description">Public reports registry</a>
+            <a class="description">My filing history</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Agencies</p>
+            <a class="description">Participating bureaus</a>
+            <a class="description">Officer triage queue</a>
+            <a class="description">SLA benchmarks</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Civic Trust</p>
+            <a class="description">Help & FAQs</a>
+            <a class="description">Evidence guidelines</a>
+            <a class="description">PII & redaction policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-box">
+        <p class="copyright-text">
+          &copy; 2026 WargaReport. All rights reserved.
+        </p>
+        <p class="statute-text">UU No. 25/2009 Compliant</p>
+      </div>
+    </footer>
+  </body>
+</html>
