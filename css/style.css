@@ -1408,6 +1408,9 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   padding: 16px 18px;
+}
+
+.accordion-open {
   background-color: var(--color-bg-submitted);
 }
 
