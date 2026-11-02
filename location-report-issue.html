@@ -49,10 +49,17 @@
             </p>
           </div>
           <div class="aside-navlink-container">
-            <a href="topic-report-issue.html" class="active-state">
-              <span>01</span> Topic
+            <a href="topic-report-issue.html">
+              <span>01</span>
+              <div>
+                <span>Topic</span>
+                <img src="/img/icons/checklist-icon.svg" alt="checklist-icon" />
+              </div>
             </a>
-            <a href="location-report-issue.html"> <span>02</span> Location </a>
+            <a href="location-report-issue.html" class="active-state">
+              <span>02</span>
+              Location
+            </a>
             <a href="proof-report-issue.html"> <span>03</span> Proof </a>
             <a href="review-send-report-issue.html">
               <span>04</span> Review & Send
@@ -73,104 +80,67 @@
         </aside>
         <section class="report-card">
           <div class="report-header">
-            <span class="eyebrow-heading">Step 01 of 04</span>
-            <h2 class="title">What needs fixing?</h2>
+            <span class="eyebrow-heading">Step 02 of 04</span>
+            <h2 class="title">Where is it located?</h2>
             <p class="description">
-              Select the municipal service category that best matches the issue
-              observed.
+              Provide street address, RT/RW, or notable landmark for inspection
+              crews.
             </p>
           </div>
-          <div class="options-category-container">
-            <div class="options-category-card">
-              <div>
-                <div class="road-icon option-category-icon"></div>
-                <div>
-                  <p>Roads & Transit</p>
-                  <span>48h SLA</span>
+          <form>
+            <div class="input-container">
+              <label for="wilayah-select-option" class="input-label">
+                <span class="eyebrow-heading"
+                  >Kelurahan / Kecamatan & Wilayah</span
+                >
+              </label>
+              <div class="input-box">
+                <select
+                  name="wilayah-select-option"
+                  id="wilayah-select-option"
+                  class="select">
+                  <option value="coblong">Coblong</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-container">
+              <div class="input-label">
+                <span class="eyebrow-heading"
+                  >Common areas in Coblong · Kota Bandung</span
+                >
+              </div>
+              <div class="radio-button-box">
+                <div class="capsul">Jl. Dago</div>
+                <div class="capsul">Institut Teknologi Bandung (ITB)</div>
+                <div class="capsul">Simpang Dago</div>
+                <div class="capsul">Pasar Dago</div>
+                <div class="capsul">Jl. Ir. H. Juanda</div>
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="address-input" class="input-label">
+                <span class="eyebrow-heading"
+                  >Street Address, RT/RW, or Landmark *</span
+                >
+              </label>
+              <div class="input-box">
+                <input
+                  id="address-input"
+                  class="input"
+                  type="text"
+                  placeholder="Jl. Tamansari depan Kebun Binatang" />
+              </div>
+            </div>
+            <div class="input-container">
+              <div class="input-box">
+                <div class="detail-cordinates">
+                  <div class="location-icon"></div>
+                  <p>Coordinates auto-pinned</p>
+                  <span>6.2088° S, 106.8456° E (WIB)</span>
                 </div>
               </div>
-              <p>Pothole / Sidewalk (Trotoar)</p>
-              <p>Potholes, broken sidewalk slabs, damaged drainage grates</p>
             </div>
-            <div class="options-category-card">
-              <div>
-                <div class="water-icon option-category-icon"></div>
-                <div>
-                  <p>Water & Sewage</p>
-                  <span>24h SLA</span>
-                </div>
-              </div>
-              <p>Water Burst / Pipa Bocor</p>
-              <p>Pipeline bursts, flooding tap leaks, dry taps</p>
-            </div>
-            <div class="options-category-card">
-              <div>
-                <div class="sun-icon option-category-icon"></div>
-                <div>
-                  <p>Street Lighting</p>
-                  <span>72h SLA</span>
-                </div>
-              </div>
-              <p>Dark Street / PJU Padam</p>
-              <p>
-                Dark street lamps (PJU), damaged base poles, broken traffic
-                signals
-              </p>
-            </div>
-            <div class="options-category-card">
-              <div>
-                <div class="trash-icon option-category-icon"></div>
-                <div>
-                  <p>Sanitation & Waste</p>
-                  <span>36h SLA</span>
-                </div>
-              </div>
-              <p>Trash Pile / Sampah Liar</p>
-              <p>
-                Illegal dump spots in alleys, overflowing TPS bins, river refuse
-              </p>
-            </div>
-            <div class="options-category-card active-option">
-              <div>
-                <div class="trees-icon option-category-icon"></div>
-                <div>
-                  <p>Public Parks & Trees</p>
-                  <span>48h SLA</span>
-                </div>
-              </div>
-              <p>Hazardous Tree / Rawan Tumbang</p>
-              <p>
-                Falling branches (pohon rawan tumbang), RPTRA playground hazards
-              </p>
-            </div>
-            <div class="options-category-card">
-              <div>
-                <div class="speaker-icon option-category-icon"></div>
-                <div>
-                  <p>Noise & Disturbance</p>
-                  <span>48h SLA</span>
-                </div>
-              </div>
-              <p>Late-night Noise / Ketertiban</p>
-              <p>
-                Nocturnal construction past 22:00 WIB, sidewalk encroachment
-              </p>
-            </div>
-            <div class="options-category-card">
-              <div>
-                <div class="building-icon option-category-icon"></div>
-                <div>
-                  <p>Building & Zoning</p>
-                  <span>72h SLA</span>
-                </div>
-              </div>
-              <p>Unsafe Construction / Bangunan</p>
-              <p>
-                Unsafe scaffolding, structural hazards, building boundary
-                violations
-              </p>
-            </div>
-          </div>
+          </form>
           <div class="report-submit-button">
             <a href="/topic-report-issue.html">Cancel</a>
             <a href="/location-report-issue.html" class="active-state"
