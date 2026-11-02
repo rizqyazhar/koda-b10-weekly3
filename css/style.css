@@ -117,6 +117,14 @@ a {
   mask-size: cover;
 }
 
+.shield-icon {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-bg-primary);
+  mask: url("/img/icons/shield-icon.svg") no-repeat center;
+  mask-size: cover;
+}
+
 .search-icon {
   width: 15px;
   height: 15px;
@@ -1131,7 +1139,7 @@ input[type="checkbox"] {
   flex-direction: row;
 }
 
-.left-side-grow {
+.side-grow {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
@@ -1410,6 +1418,96 @@ input[type="checkbox"] {
 }
 
 /* END MAIN */
+
+/* START ASIDE */
+
+.aside {
+  width: 100%;
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.aside > div:nth-child(1) > h1 {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.aside > div:nth-child(1) > p {
+  font-size: 13px;
+}
+
+.aside-navlink-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-navlink-container a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 13px;
+  font-family: var(--font-publicSans);
+  font-size: 13px;
+  border-radius: 20px;
+  font-weight: 400;
+  color: var(--color-font-tertiary);
+}
+
+.aside-navlink-container a.active-state {
+  font-weight: 600;
+  color: var(--color-font-quaternary);
+}
+
+.aside-navlink-container a > span {
+  font-family: var(--font-ibmPlexMono);
+  color: var(--color-font-tertiary);
+  font-size: 11px;
+}
+
+.aside-navlink-container a.active-state > span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.aside-message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 14px 16px 14px;
+  border-radius: 20px;
+  border: 1px dashed var(--color-border-secondary);
+  font-family: var(--font-publicSans);
+  background-color: var(--color-bg-tertiary);
+}
+
+.aside-message-container > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aside-message-container > div > p {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-font-primary);
+}
+
+.aside-message-container > p {
+  font-size: 11px;
+  line-height: 17px;
+  color: var(--color-font-tertiary);
+}
+
+.aside > a {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-bg-primary);
+  font-family: var(--font-publicSans);
+}
+
+/* END ASIDE */
 
 /* START FOOTER */
 
