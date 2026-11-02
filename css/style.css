@@ -664,11 +664,13 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding-bottom: 40px;
 }
 
 .hero-section-two {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .eyebrow-heading {
