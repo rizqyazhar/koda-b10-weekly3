@@ -2080,6 +2080,8 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 5px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--color-border-primary);
 }
 
 .filter-notification-box > div {
@@ -2094,6 +2096,7 @@ input[type="checkbox"] {
 }
 
 .filter-notification-box > div label.capsul {
+  position: relative;
   font-weight: 500;
   font-size: 12px;
   color: var(--color-font-secondary);
@@ -2112,6 +2115,95 @@ input[type="checkbox"] {
   color: var(--color-font-quaternary);
   border: none;
 }
+
+.side-grow:has(.notification-nav-box) {
+  padding-block: 20px;
+}
+
+.notification-nav-box,
+.notification-details-box {
+  border-radius: 16px;
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-tertiary);
+  overflow: hidden;
+}
+
+.notification-nav-box {
+  grid-column: 1 / 6;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-nav-list input {
+  opacity: 0;
+  position: absolute;
+}
+
+.notification-nav-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 13px 15px 14px;
+}
+
+.notification-nav-list:has(input:checked) {
+  background-color: var(--color-bg-quaternary);
+  border-left: 3px solid var(--color-bg-primary);
+  padding-left: 12px;
+}
+
+.notification-details-box {
+  grid-column: 6 / 13;
+  padding: 25px;
+}
+
+.notification-nav-list > span:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-ibmPlexMono);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.notification-nav-list > span:nth-child(2) span:nth-child(1) {
+  color: var(--color-bg-primary);
+}
+
+.notification-nav-list > span:nth-child(2) span:nth-child(2) {
+  color: var(--color-font-tertiary);
+}
+
+.notification-nav-list > p {
+  font-family: var(--font-publicSans);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-font-primary);
+}
+
+.notification-nav-list > span:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-nav-list > span:nth-child(4) > span:nth-child(2) {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: var(--color-bg-primary);
+}
+
+.notification-nav-list > span:nth-child(4) > span:nth-child(1) {
+  font-family: var(--font-publicSans);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-font-tertiary);
+}
+
 /* END MAIN */
 
 /* START ASIDE */
