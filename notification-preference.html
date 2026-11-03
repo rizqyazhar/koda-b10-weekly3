@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Reports | WargaReport</title>
+    <link rel="icon" type="image/x-icon" href="/img/icons/logo.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="navbar padding-inline">
+      <div class="logo-box">
+        <img src="/img/icons/logo.svg" alt="web-logo" />
+        <a href="/index.html">WargaReport</a>
+      </div>
+      <nav class="nav-links">
+        <a href="/live-feed.html" class="inactive-state">Live Feed</a>
+        <a href="/track.html" class="inactive-state">Track</a>
+        <a href="/help.html" class="inactive-state">How it works</a>
+        <a href="/my-reports.html" class="capsul active-state">My Reports</a>
+      </nav>
+      <div class="buttons-box">
+        <div class="notif-icon-box">
+          <div class="notif-icon"></div>
+          <div class="green-circle"></div>
+        </div>
+        <div class="user-info-toggle">
+          <div class="user-photo">FS</div>
+          <div class="user-info">
+            <span>Fahrul Septiana</span>
+            <span>citizen</span>
+          </div>
+          <div class="chevron-down-icon"></div>
+        </div>
+        <button class="button button-primary">
+          <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
+          Report an issue
+        </button>
+        <!-- <div class="modal-profile-toggle">
+          <a>
+            <span>Fahrul Septiana</span>
+            <span>fahrul@wargareport.id</span>
+          </a>
+          <a>
+            <div class="profile-icon"></div>
+            <span>My Filed Reports</span>
+          </a>
+          <a>
+            <div class="logout-icon"></div>
+            <span>Sign Out</span>
+          </a>
+        </div> -->
+      </div>
+    </header>
+    <main class="main padding-inline">
+      <section class="hero-section-two">
+        <div class="hero-text-box-two">
+          <span class="eyebrow-heading">Citizen Management</span>
+          <h1 class="title">Account & Case History</h1>
+        </div>
+      </section>
+      <section class="filter-chips">
+        <a href="/my-reports.html" class="capsul">
+          <span>My complaints</span>
+        </a>
+        <a href="/profile.html" class="capsul">
+          <span>Profile</span>
+        </a>
+        <a href="/notification-preference.html" class="capsul active-state">
+          <span>Notifications</span>
+        </a>
+        <a href="/privacy-data.html" class="capsul">
+          <span>Privacy & data</span>
+        </a>
+        <a href="/security.html" class="capsul">
+          <span>Security</span>
+        </a>
+      </section>
+      <section class="side-grow">
+        <form class="form">
+          <div class="form-header">
+            <h2 class="title">Dispatch Notification Preferences</h2>
+            <p class="description">
+              Control when municipal bureaus may send automated status alerts.
+            </p>
+          </div>
+          <div class="checkbox-box">
+            <label for="email-status-transitions">
+              <input
+                type="checkbox"
+                name="email-status-transitions"
+                id="email-status-transitions"
+                class="email-status-transitions" />
+              <span>
+                <span>Email Status Transitions</span>
+                <span
+                  >Receive an email whenever an inspector triages, assigns, or
+                  resolves your case.</span
+                >
+              </span>
+            </label>
+            <label for="urgent-sms-alerts">
+              <input
+                type="checkbox"
+                name="urgent-sms-alerts"
+                id="urgent-sms-alerts"
+                class="urgent-sms-alerts" />
+              <span>
+                <span>Urgent SMS Alerts</span>
+                <span
+                  >Receive text messages when emergency crews need physical gate
+                  access.</span
+                >
+              </span>
+            </label>
+            <label for="weekly-ward-resolution-digest">
+              <input
+                type="checkbox"
+                name="weekly-ward-resolution-digest"
+                id="weekly-ward-resolution-digest"
+                class="weekly-ward-resolution-digest" />
+              <span>
+                <span>Weekly Ward Resolution Digest</span>
+                <span
+                  >Summary of all public infrastructure projects completed in
+                  your postal code.</span
+                >
+              </span>
+            </label>
+          </div>
+          <button class="button button-primary">
+            Update alert preferences
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer padding-inline">
+      <div class="footer-content">
+        <div class="about-website">
+          <a href="index.html" class="title">WargaReport</a>
+          <p class="description">
+            WargaReport is an independent civic reporting platform for municipal
+            infrastructure issues across Indonesia. Residents submit evidence,
+            follow SLA countdowns, and track resolution updates from the
+            responsible agencies.
+          </p>
+          <p class="warning-message">
+            Not for life-threatening emergencies — call 112 (National Emergency
+            Call Center) or BPBD DKI directly.
+          </p>
+        </div>
+        <div class="footer-navlink">
+          <div>
+            <p class="footer-nav-title">Citizens</p>
+            <a class="description">File a report</a>
+            <a class="description">Track complaint</a>
+            <a class="description">Public reports registry</a>
+            <a class="description">My filing history</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Agencies</p>
+            <a class="description">Participating bureaus</a>
+            <a class="description">Officer triage queue</a>
+            <a class="description">SLA benchmarks</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">Civic Trust</p>
+            <a class="description">Help & FAQs</a>
+            <a class="description">Evidence guidelines</a>
+            <a class="description">PII & redaction policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-box">
+        <p class="copyright-text">
+          &copy; 2026 WargaReport. All rights reserved.
+        </p>
+        <p class="statute-text">UU No. 25/2009 Compliant</p>
+      </div>
+    </footer>
+  </body>
+</html>
