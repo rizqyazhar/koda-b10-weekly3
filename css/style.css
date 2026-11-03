@@ -473,7 +473,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.input-box:nth-child(2) div:nth-child(2) {
+.input-box div.input-with-button {
   width: 100%;
   display: flex;
   align-items: center;
@@ -503,6 +503,12 @@ body.modal-open {
 
 #nik-input {
   font-family: var(--font-ibmPlexMono);
+}
+
+div:has(.input-container) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .small {
