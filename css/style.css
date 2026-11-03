@@ -101,6 +101,14 @@ a {
   mask-size: cover;
 }
 
+.logout-icon {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-font-warning);
+  mask: url("/img/icons/logout-icon.svg") no-repeat center;
+  mask-size: cover;
+}
+
 .lock-icon {
   width: 14px;
   height: 14px;
@@ -561,6 +569,7 @@ body.modal-open {
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
 }
 
 .button {
@@ -650,6 +659,70 @@ body.modal-open {
   text-transform: uppercase;
 }
 
+.modal-profile-toggle {
+  width: 70%;
+  position: absolute;
+  top: 120%;
+  left: -13%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-secondary);
+}
+
+.modal-profile-toggle a {
+  padding: 16px 18px;
+  font-size: 12px;
+  font-family: var(--font-publicSans);
+}
+
+.modal-profile-toggle a:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-profile-toggle a:nth-child(1) span:nth-child(1) {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-font-primary);
+}
+
+.modal-profile-toggle a:nth-child(1) span:nth-child(2) {
+  font-weight: 400;
+  font-size: 11px;
+  font-family: var(--font-ibmPlexMono);
+  color: var(--color-font-tertiary);
+}
+
+.modal-profile-toggle a:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  color: var(--color-font-secondary);
+}
+
+.modal-profile-toggle a:nth-child(2) > div {
+  background-color: var(--color-font-secondary);
+  width: 12px;
+  height: 12px;
+}
+
+.modal-profile-toggle a:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--color-font-warning);
+}
+
+.modal-profile-toggle a:nth-child(3) > .logout-icon {
+  width: 12px;
+  height: 12px;
+}
 /* END NAVBAR */
 
 /* START MAIN */
