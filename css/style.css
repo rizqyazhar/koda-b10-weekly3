@@ -360,6 +360,13 @@ body.modal-open {
   border-radius: 20px;
   background-color: var(--color-bg-tertiary);
   border: 1px solid var(--color-border-secondary);
+
+  @media (width <= 768px) {
+    width: 70%;
+  }
+  @media (width <= 640px) {
+    width: 90%;
+  }
 }
 
 .modal-header {
@@ -375,6 +382,10 @@ body.modal-open {
   width: 16px;
   height: 16px;
   color: var(--color-font-secondary);
+  @media (width <= 640px) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .modal-header > div {
@@ -385,10 +396,16 @@ body.modal-open {
 
 .modal-header > div p:nth-child(1) {
   font-size: 18px;
+  @media (width <= 640px) {
+    font-size: 14px;
+  }
 }
 
 .modal-header > div p:nth-child(2) {
   font-size: 12px;
+  @media (width <= 640px) {
+    font-size: 10px;
+  }
 }
 
 .modal-content {
@@ -425,6 +442,9 @@ body.modal-open {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 8px;
+  @media (width <= 640px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .button-toggle-login-register a {
@@ -511,7 +531,7 @@ body.modal-open {
   font-family: var(--font-ibmPlexMono);
 }
 
-div:has(.input-container) {
+div.input-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
