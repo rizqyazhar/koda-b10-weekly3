@@ -657,7 +657,7 @@ body.modal-open {
 .main {
   display: flex;
   flex-direction: column;
-  padding-block: 40px;
+  padding-block: 40px 136px;
   min-height: 50dvh;
 }
 
