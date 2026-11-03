@@ -2153,6 +2153,43 @@ input[type="checkbox"] {
 .notification-details-box {
   grid-column: 6 / 13;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.notification-details-box > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.notification-details-box > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notification-details-box
+  > div:nth-child(1)
+  > div:nth-child(1)
+  span:nth-child(2) {
+  font-family: var(--font-ibmPlexMono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-font-quinary);
+}
+
+.notification-details-box > div:nth-child(2) p:nth-child(1) {
+  font-size: 19px;
+}
+
+.notification-details-box > div:nth-child(2) p:nth-child(2) {
+  color: var(--color-font-tertiary);
+  font-weight: 400;
+  font-family: var(--font-ibmPlexMono);
+  font-size: 13px;
 }
 
 .notification-nav-list > span:nth-child(2) {
@@ -2197,6 +2234,22 @@ input[type="checkbox"] {
   font-weight: 400;
   font-size: 12px;
   color: var(--color-font-tertiary);
+}
+
+.notification-message {
+  padding: 18px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-font-primary);
+  font-family: var(--font-publicSans);
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-closed);
+}
+
+.notification-details-box > .button {
+  background-color: var(--color-bg-primary);
+  color: var(--color-font-quaternary);
 }
 
 /* END MAIN */
