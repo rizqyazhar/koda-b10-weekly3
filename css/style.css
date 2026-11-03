@@ -485,8 +485,12 @@ body.modal-open {
   font-weight: 400;
   font-size: 13px;
   background-color: inherit;
-  color: var(--color-font-tertiary);
+  color: var(--color-font-primary);
   font-family: var(--font-publicSans);
+}
+
+.input::placeholder {
+  color: var(--color-font-tertiary);
 }
 
 #nik-input {
@@ -732,6 +736,7 @@ body.modal-open {
   flex-direction: column;
   padding-block: 40px 136px;
   min-height: 50dvh;
+  gap: 20px;
 }
 
 /* HERO */
@@ -740,13 +745,11 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-bottom: 40px;
 }
 
 .hero-section-two {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
   align-items: end;
 }
 
@@ -2448,6 +2451,73 @@ table > tbody > tr td:nth-child(2) span:nth-child(1) {
 table > tbody > tr td:nth-child(2) span:nth-child(2) {
   font-weight: 400;
   color: var(--color-font-tertiary);
+}
+
+.form {
+  grid-column: 1 / 8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 26px 31px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-tertiary);
+}
+
+.form-header > h2 {
+  font-size: 18px;
+}
+
+.form-header > p {
+  font-size: 12px;
+}
+
+.upload-profile-photo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.photo-bg {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: var(--font-ibmPlexMono);
+  color: var(--color-font-quinary);
+  background-color: var(--color-bg-quaternary);
+  border: 2px solid var(--color-border-tertiary);
+}
+
+.photo-bg ~ div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.photo-bg ~ div > p {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-publicSans);
+}
+
+.photo-bg ~ div p:nth-child(2) {
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--font-publicSans);
+}
+
+.photo-bg ~ div > button {
+  margin-top: 3px;
 }
 
 /* END MAIN */
