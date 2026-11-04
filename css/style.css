@@ -853,6 +853,11 @@ div.input-container {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  @media (width <= 768px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
 }
 
 .eyebrow-heading {
@@ -899,13 +904,14 @@ div.input-container {
   font-family: var(--font-publicSans);
 }
 
-.hero-text-box > h1 {
+.hero-text-box > h1,
+.hero-text-box-two > h1 {
   font-size: 50px;
   @media (width <= 768px) {
     font-size: 42px;
   }
   @media (width <= 640px) {
-    font-size: 38px;
+    font-size: 28px;
   }
 }
 
@@ -970,6 +976,10 @@ div.input-container {
   font-family: var(--font-publicSans);
   font-weight: 500;
   font-size: 12px;
+}
+
+.pill-switch div.capsul {
+  border-radius: 20px;
 }
 
 .pill-switch div:nth-child(2) {
@@ -1162,7 +1172,9 @@ div.input-container {
   align-items: center;
   gap: 8px;
   @media (width <= 640px) {
+    flex-wrap: wrap;
     justify-content: space-between;
+    white-space: nowrap;
   }
 }
 
@@ -1231,6 +1243,13 @@ div.input-container {
   align-items: center;
   gap: 4px;
   font-family: var(--font-publicSans);
+  @media (width <= 640px) {
+    flex-wrap: wrap;
+  }
+}
+
+.map-report-box > .location-icon {
+  display: none;
 }
 
 .map-report {
@@ -1289,6 +1308,9 @@ div.input-container {
   font-family: var(--font-publicSans);
   font-weight: 400;
   font-size: 13px;
+  @media (width <= 768px) {
+    width: 100%;
+  }
 }
 
 .search-filter-input {
@@ -1317,6 +1339,9 @@ div.input-container {
   font-weight: 500;
   font-size: 12px;
   font-family: var(--font-publicSans);
+  @media (width <= 640px) {
+    font-size: 10px;
+  }
 }
 
 .chips {
@@ -1326,6 +1351,9 @@ div.input-container {
   gap: 6px;
   padding: 7px 14px;
   border-radius: 20px;
+  @media (width <= 640px) {
+    gap: 4px;
+  }
 }
 
 .chips-active {
@@ -1349,6 +1377,11 @@ div.input-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (width <= 768px) {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .status-filter {
@@ -1360,6 +1393,27 @@ div.input-container {
   border: 1px solid var(--color-border-primary);
   background-color: var(--color-bg-tertiary);
   font-weight: 400;
+  @media (width <= 768px) {
+    width: 100%;
+    padding-inline: 10px;
+    gap: 18px;
+  }
+}
+
+.status-filter > div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media (width <= 768px) {
+    gap: 18px;
+  }
+
+  @media (width <= 640px) {
+    gap: 14px;
+    overflow-x: auto;
+  }
 }
 
 .status-filter > span {
@@ -1374,6 +1428,9 @@ div.input-container {
   outline: none;
   font-size: 12px;
   font-family: var(--font-publicSans);
+  @media (width <= 640px) {
+    white-space: nowrap;
+  }
 }
 
 .status-filter-active {
@@ -1410,7 +1467,6 @@ input[type="checkbox"] {
 .feed-content-lists {
   width: 100%;
   height: 500px;
-  /* padding: 5px; */
   border: 1px solid var(--color-border-primary);
   border-radius: 20px;
   background-color: var(--color-bg-tertiary);
@@ -1434,6 +1490,10 @@ input[type="checkbox"] {
   gap: 14px;
   padding: 16px 18px;
   border-bottom: 1px solid var(--color-border-primary);
+  @media (width <= 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .long-card:last-child .long-card-texts .title {
@@ -1461,6 +1521,10 @@ input[type="checkbox"] {
   background-position: center;
   background-color: var(--color-bg-secondary);
   border: 1px solid var(--color-border-primary);
+  @media (width <= 768px) {
+    width: 100%;
+    height: 250px;
+  }
 }
 
 .img-long-card-box img {
@@ -1473,6 +1537,9 @@ input[type="checkbox"] {
   font-size: 13px;
   font-family: var(--font-publicSans);
   color: var(--color-font-primary);
+  @media (width <= 640px) {
+    white-space: wrap;
+  }
 }
 
 .note-report > .middle-dot {
