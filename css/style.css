@@ -837,7 +837,6 @@ div.input-container {
   min-height: 50dvh;
   gap: 20px;
   @media (width <= 768px) {
-    align-items: center;
     padding-block: 60px;
   }
 }
@@ -1516,6 +1515,7 @@ input[type="checkbox"] {
   @media (width <= 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
   }
 }
 
@@ -1570,8 +1570,21 @@ input[type="checkbox"] {
   gap: 9px;
 }
 
+.form-card-title > .title {
+  font-size: 35px;
+  @media (width <= 768px) {
+    font-size: 25px;
+  }
+  @media (width <= 640px) {
+    font-size: 20px;
+  }
+}
+
 .form-card-title > .description > span {
   display: block;
+  @media (width: 768px) {
+    display: inline;
+  }
 }
 
 .form-label {
@@ -1630,7 +1643,6 @@ input[type="checkbox"] {
     grid-column: 1 / 13;
     grid-row: 2 / 3;
     padding-right: 0;
-    /* height: fit-content; */
   }
   @media (width <= 640px) {
     font-size: 11px;
@@ -1670,6 +1682,9 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media (width <= 768pc) {
+    grid-column: 1 / 13;
+  }
 }
 
 .accordion {
@@ -1730,6 +1745,9 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (width <= 768px) {
+    grid-column: 1 / 13;
+  }
 }
 
 .status-meaning-box {
