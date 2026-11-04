@@ -1514,7 +1514,6 @@ input[type="checkbox"] {
   gap: 32px;
   @media (width <= 768px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
   }
 }
@@ -2252,14 +2251,25 @@ input[type="checkbox"] {
 }
 
 .receipt-card {
+  grid-column: 1 / 8;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 22px;
-  width: 55%;
   padding: 33px 35px;
   border-radius: 16px;
   background-color: var(--color-bg-tertiary);
   border: 1px solid var(--color-border-primary);
+  @media (width <= 768px) {
+    grid-column: 1 / 13;
+    padding: 25px 23px;
+    gap: 18px;
+  }
+  @media (width <= 640px) {
+    width: 100%;
+    padding: 13px 15px;
+    gap: 14px;
+  }
 }
 
 .receipt-code-box {
@@ -2268,11 +2278,23 @@ input[type="checkbox"] {
   gap: 2px;
 }
 
+.receipt-code-box > .eyebrow-heading {
+  @media (width <= 768px) {
+    font-size: 10px;
+  }
+}
 .receipt-code-box > div p {
   font-weight: 600;
   font-size: 36px;
   color: var(--color-font-quinary);
   font-family: var(--font-ibmPlexMono);
+  @media (width <= 768px) {
+    font-size: 28px;
+  }
+
+  @media (width <= 640px) {
+    font-size: 24px;
+  }
 }
 
 .receipt-code-box > div {
@@ -2291,6 +2313,10 @@ input[type="checkbox"] {
   background-color: var(--color-border-primary);
   outline: none;
   border: none;
+  @media (width <= 640px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .notes-receipt-box {
@@ -2314,20 +2340,30 @@ input[type="checkbox"] {
   border-radius: 16px;
   background-color: var(--color-bg-closed);
   border: 1px dashed var(--color-border-secondary);
+  @media (width <= 640px) {
+    padding: 14px 11px;
+    gap: 5px;
+  }
 }
 
-.receipt-description > p:nth-child(1) {
+.dashed-box > p:nth-child(1) {
   font-family: var(--font-publicSans);
   font-weight: 600;
   font: size 16px;
   color: var(--color-font-primary);
+  @media (width <= 640px) {
+    font-size: 12px;
+  }
 }
 
-.receipt-description > p:nth-child(2) {
+.dashed-box > p:nth-child(2) {
   font-family: var(--font-ibmPlexMono);
   font-weight: 400;
   font: size 12px;
   color: var(--color-font-tertiary);
+  @media (width <= 640px) {
+    font-size: 10px;
+  }
 }
 
 .receipt-guidance {
@@ -2342,10 +2378,10 @@ input[type="checkbox"] {
 .receipt-guidance li {
   margin-left: 20px;
   padding-left: 7px;
-  font-family: var(--font-publicSans);
   font-weight: 400;
   font-size: 13px;
   color: var(--color-font-secondary);
+  font-family: var(--font-publicSans);
 }
 
 .receipt-card > div:last-child {
@@ -2353,6 +2389,9 @@ input[type="checkbox"] {
   gap: 10px;
   padding-top: 20px;
   border-top: 1px solid var(--color-border-primary);
+  @media (width <= 640px) {
+    flex-direction: column;
+  }
 }
 
 .receipt-card > div:last-child button:nth-child(2) {
