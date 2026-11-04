@@ -833,11 +833,11 @@ div.input-container {
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-block: 40px 136px;
   min-height: 50dvh;
   gap: 20px;
   @media (width <= 768px) {
+    align-items: center;
     padding-block: 60px;
   }
 }
