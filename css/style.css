@@ -953,10 +953,6 @@ div.input-container {
   display: flex;
   align-items: center;
   gap: 12px;
-
-  @media (width <= 768px) {
-    flex-direction: column;
-  }
 }
 
 .hero-button-box > button {
@@ -2765,15 +2761,14 @@ input[type="checkbox"] {
 .table-container {
   width: 100%;
   @media (width <= 768px) {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 }
 
 table {
-  width: 100%;
+  min-width: 100%;
   display: table;
   table-layout: auto;
-  width: 100%;
   border-collapse: collapse;
   text-align: left;
   border-radius: 16px;
@@ -2798,10 +2793,11 @@ table > tbody > tr td,
 table > thead > tr th {
   padding: 12px;
   @media (width <= 768px) {
+    text-wrap: nowrap;
     padding: 10px;
-    text-wrap: pretty;
   }
 }
+
 table > thead > tr th {
   white-space: nowrap;
 }
