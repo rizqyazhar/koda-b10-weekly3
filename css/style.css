@@ -2554,6 +2554,10 @@ input[type="checkbox"] {
   gap: 6px;
 }
 
+.filter-chips .capsul {
+  border-radius: 20px;
+}
+
 .filter-chips > div label input {
   opacity: 0;
   position: absolute;
@@ -2728,6 +2732,9 @@ input[type="checkbox"] {
 }
 
 .filter-chips a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 13px;
   color: var(--color-font-secondary);
