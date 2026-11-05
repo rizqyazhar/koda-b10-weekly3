@@ -20,17 +20,19 @@
         <a href="/my-reports.html" class="capsul active-state">My Reports</a>
       </nav>
       <div class="buttons-box">
-        <div class="notif-icon-box">
-          <div class="notif-icon"></div>
-          <div class="green-circle"></div>
-        </div>
-        <div class="user-info-toggle">
-          <div class="user-photo">FS</div>
-          <div class="user-info">
-            <span>Fahrul Septiana</span>
-            <span>citizen</span>
+        <div>
+          <div class="notif-icon-box">
+            <div class="notif-icon"></div>
+            <div class="green-circle"></div>
           </div>
-          <div class="chevron-down-icon"></div>
+          <div class="user-info-toggle">
+            <div class="user-photo">FS</div>
+            <div class="user-info">
+              <span>Fahrul Septiana</span>
+              <span>citizen</span>
+            </div>
+            <div class="chevron-down-icon"></div>
+          </div>
         </div>
         <button class="button button-primary">
           <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
@@ -60,19 +62,19 @@
         </div>
       </section>
       <section class="filter-chips">
-        <a href="/my-reports.html" class="capsul active-state">
+        <a href="/my-reports.html" class="capsul radius-20 active-state">
           <span>My complaints</span>
         </a>
-        <a href="/profile.html" class="capsul">
+        <a href="/profile.html" class="capsul radius-20">
           <span>Profile</span>
         </a>
-        <a href="/notification-preference.html" class="capsul">
+        <a href="/notification-preference.html" class="capsul radius-20">
           <span>Notifications</span>
         </a>
-        <a href="/privacy-data.html" class="capsul">
+        <a href="/privacy-data.html" class="capsul radius-20">
           <span>Privacy & data</span>
         </a>
-        <a href="/security.html" class="capsul">
+        <a href="/security.html" class="capsul radius-20">
           <span>Security</span>
         </a>
       </section>
@@ -81,89 +83,91 @@
           <span class="eyebrow-heading">filter:</span>
           <button class="button button-primary">+ File new complaint</button>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Case ID</th>
-              <th>Title / Location</th>
-              <th>Agency</th>
-              <th>Status</th>
-              <th>SLA Target</th>
-              <th>Last Update</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>CMP-2026- 9472</td>
-              <td>
-                <span>
-                  Pohon tumbang di depan Kebun Binatang samping Kampus ITB
-                </span>
-                <span>Jl. Tamansari depan Kebun Binatang</span>
-              </td>
-              <td>Dinas Pertamanan dan Hutan Kota Bandung</td>
-              <td>
-                <span class="tag submitted-tag">
-                  <img src="/img/icons/time-icon.svg" alt="submitted-icon" />
-                  Submitted
-                </span>
-              </td>
-              <td>
-                <span>
-                  <!-- <span
-                    ><img
-                      src="/img/icons/road-icon.svg"
-                      alt="road-icon" /></span
-                  > -->
-                  <span>Awaiting verification</span>
-                </span>
-              </td>
-              <td>Oct 30</td>
-            </tr>
-            <tr>
-              <td>CMP-2026- 8841</td>
-              <td>
-                <span>
-                  PAM clean drinking water pipeline burst flooding sidewalk in
-                  front of Cipete Raya MRT
-                </span>
-                <span
-                  >Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete
-                  Raya)</span
-                >
-              </td>
-              <td>Perumda PAM JAYA (Clean Drinking Water)</td>
-              <td>
-                <span class="tag inreview-tag">
-                  <img src="/img/icons/search-icon.svg" alt="inreview-icon" />
-                  In review
-                </span>
-              </td>
-              <td>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-triangle-alert preview-icon">
-                    <path
-                      d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
-                    <path d="M12 9v4" />
-                    <path d="M12 17h.01" />
-                  </svg>
-                  <span>Breached by 64h 2m</span>
-                </span>
-              </td>
-              <td>Oct 29</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Case ID</th>
+                <th>Title / Location</th>
+                <th>Agency</th>
+                <th>Status</th>
+                <th>SLA Target</th>
+                <th>Last Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CMP-2026- 9472</td>
+                <td>
+                  <span>
+                    Pohon tumbang di depan Kebun Binatang samping Kampus ITB
+                  </span>
+                  <span>Jl. Tamansari depan Kebun Binatang</span>
+                </td>
+                <td>Dinas Pertamanan dan Hutan Kota Bandung</td>
+                <td>
+                  <span class="tag submitted-tag">
+                    <img src="/img/icons/time-icon.svg" alt="submitted-icon" />
+                    Submitted
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    <!-- <span
+                      ><img
+                        src="/img/icons/road-icon.svg"
+                        alt="road-icon" /></span
+                    > -->
+                    <span>Awaiting verification</span>
+                  </span>
+                </td>
+                <td>Oct 30</td>
+              </tr>
+              <tr>
+                <td>CMP-2026- 8841</td>
+                <td>
+                  <span>
+                    PAM clean drinking water pipeline burst flooding sidewalk in
+                    front of Cipete Raya MRT
+                  </span>
+                  <span
+                    >Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete
+                    Raya)</span
+                  >
+                </td>
+                <td>Perumda PAM JAYA (Clean Drinking Water)</td>
+                <td>
+                  <span class="tag inreview-tag">
+                    <img src="/img/icons/search-icon.svg" alt="inreview-icon" />
+                    In review
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-triangle-alert preview-icon">
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                      <path d="M12 9v4" />
+                      <path d="M12 17h.01" />
+                    </svg>
+                    <span>Breached by 64h 2m</span>
+                  </span>
+                </td>
+                <td>Oct 29</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
     <footer class="footer padding-inline">
