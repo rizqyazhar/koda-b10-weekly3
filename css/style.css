@@ -2068,10 +2068,19 @@ input[type="checkbox"] {
   font-size: 12px;
   font-family: var(--font-publicSans);
   color: var(--color-font-secondary);
+  @media (width <= 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .radio-button-box > div.capsul {
+  width: fit-content;
   border: 1px solid var(--color-border-secondary);
+
+  @media (width <= 768px) {
+    border-radius: 20px;
+    white-space: nowrap;
+  }
 }
 
 .input-box:has(.detail-cordinates) {
