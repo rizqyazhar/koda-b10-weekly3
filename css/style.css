@@ -2760,6 +2760,8 @@ input[type="checkbox"] {
 
 .table-container {
   width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
   @media (width <= 768px) {
     overflow-x: auto;
   }
@@ -2771,8 +2773,6 @@ table {
   table-layout: auto;
   border-collapse: collapse;
   text-align: left;
-  border-radius: 16px;
-  overflow: hidden;
   outline: 1px solid var(--color-border-primary);
 }
 
@@ -2790,7 +2790,8 @@ table > tbody {
 }
 
 table > tbody > tr td,
-table > thead > tr th {
+table > thead > tr th,
+table > tbody > tr th {
   padding: 12px;
   @media (width <= 768px) {
     text-wrap: nowrap;
@@ -2806,7 +2807,7 @@ table > tbody > tr:nth-child(even) {
   border-top: 1px solid var(--color-border-primary);
 }
 
-table > tbody > tr td:nth-child(1) {
+table > tbody > tr th:nth-child(1) {
   font-weight: 600;
   font-size: 13px;
   color: var(--color-bg-primary);
