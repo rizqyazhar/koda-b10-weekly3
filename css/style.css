@@ -648,6 +648,11 @@ div.input-container {
   background-color: var(--color-bg-primary);
 }
 
+.active-state:hover,
+.inactive-state:hover {
+  opacity: 90%;
+}
+
 .capsul {
   width: fit-content;
   display: flex;
@@ -703,6 +708,11 @@ div.input-container {
     gap: 4px;
     font-size: 10px;
   }
+}
+
+.button:hover {
+  opacity: 90%;
+  cursor: pointer;
 }
 
 .button-primary {
@@ -1370,6 +1380,18 @@ div.input-container {
   }
 }
 
+.chips:hover {
+  cursor: pointer;
+}
+
+.chips-active:hover {
+  opacity: 90%;
+}
+
+.chips-inactive:hover {
+  border-color: var(--color-bg-primary);
+}
+
 .chips-active {
   background-color: var(--color-bg-primary);
   color: var(--color-font-quaternary);
@@ -1458,6 +1480,10 @@ div.input-container {
 .status-filter-inactive {
   background-color: inherit;
   color: var(--color-font-secondary);
+}
+
+.status-filter-button:hover {
+  cursor: pointer;
 }
 
 .with-photo-filter-label {
@@ -1779,6 +1805,10 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   padding: 16px 18px;
+}
+
+.accordion-header:hover {
+  cursor: pointer;
 }
 
 .accordion-open {
@@ -2555,6 +2585,10 @@ input[type="checkbox"] {
   }
 }
 
+.filter-chips a:hover {
+  color: var(--color-bg-primary);
+}
+
 .filter-chips > div {
   display: flex;
   align-items: center;
@@ -2883,6 +2917,10 @@ table > tbody > tr td:nth-child(2) span:nth-child(2) {
   color: var(--color-font-tertiary);
 }
 
+table tbody tr:hover {
+  background-color: var(--color-bg-submitted);
+}
+
 .form {
   grid-column: 1 / 8;
   display: flex;
@@ -3052,6 +3090,10 @@ table > tbody > tr td:nth-child(2) span:nth-child(2) {
   border-radius: 20px;
   font-weight: 400;
   color: var(--color-font-tertiary);
+}
+
+.aside-navlink-container a:hover {
+  opacity: 90%;
 }
 
 .aside-navlink-container a:not(.active-state) > div {
