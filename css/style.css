@@ -2413,7 +2413,7 @@ input[type="checkbox"] {
     font-size: 10px;
   }
 }
-.receipt-code-box > div p {
+.receipt-code-box > div h1 {
   font-weight: 600;
   font-size: 36px;
   color: var(--color-font-quinary);
@@ -2476,10 +2476,10 @@ input[type="checkbox"] {
   }
 }
 
-.dashed-box > p:nth-child(1) {
+.dashed-box > h2 {
   font-family: var(--font-publicSans);
   font-weight: 600;
-  font: size 16px;
+  font-size: 16px;
   color: var(--color-font-primary);
   @media (width <= 640px) {
     font-size: 12px;
@@ -2489,7 +2489,7 @@ input[type="checkbox"] {
 .dashed-box > p:nth-child(2) {
   font-family: var(--font-ibmPlexMono);
   font-weight: 400;
-  font: size 12px;
+  font-size: 12px;
   color: var(--color-font-tertiary);
   @media (width <= 640px) {
     font-size: 10px;
@@ -2505,6 +2505,13 @@ input[type="checkbox"] {
   border-top: 1px solid var(--color-border-primary);
 }
 
+.receipt-guidance > h3 {
+  font-family: var(--font-fraunces);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-font-primary);
+}
+
 .receipt-guidance li {
   margin-left: 20px;
   padding-left: 7px;
@@ -2512,6 +2519,10 @@ input[type="checkbox"] {
   font-size: 13px;
   color: var(--color-font-secondary);
   font-family: var(--font-publicSans);
+}
+
+.receipt-guidance > li > span {
+  font-weight: 700;
 }
 
 .receipt-card > div:last-child {
