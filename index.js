@@ -289,3 +289,52 @@ recentCommunityReportCardData.map((data) => {
 });
 
 // end recent recent community report card
+
+// start accordion
+
+const generateAccordionContent = (target) => {
+  target.append(`<div class="accordion-content">
+              <ol>
+                <li>
+                  You spot an issue (pothole, water leak, dark street) and snap
+                  a photo.
+                </li>
+                <li>
+                  WargaReport verifies the evidence and dispatches it directly
+                  to the responsible municipal agency (PAM JAYA, Bina Marga,
+                  Dishub, DLH, Satpol PP, Citata).
+                </li>
+                <li>
+                  A public countdown starts. Neighbors can upvote the report to
+                  increase priority.
+                </li>
+                <li>
+                  Field crews resolve the physical issue and post verification
+                  proof before closing.
+                </li>
+              </ol>
+            </div>`);
+};
+
+const accordion = document.querySelectorAll(".accordion");
+
+accordion.forEach((item) => {
+  item
+    .querySelector(".accordion-header")
+    .addEventListener("click", function () {
+      this.classList.toggle("accordion-header-open");
+      this.querySelector(".chevron-down-icon").classList.toggle(
+        "icon-accordion-open",
+      );
+      const accContent = item.querySelector(".accordion-content");
+      if (accContent.classList.contains("closed-acc")) {
+        accContent.classList.add("open-acc");
+        accContent.classList.remove("closed-acc");
+      } else {
+        accContent.classList.remove("open-acc");
+        accContent.classList.add("closed-acc");
+      }
+    });
+});
+
+// end accordion
