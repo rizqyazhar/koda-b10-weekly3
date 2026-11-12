@@ -985,6 +985,7 @@ header {
 }
 
 .user-info-toggle {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1030,14 +1031,14 @@ header {
 }
 
 .modal-profile-toggle {
-  width: 70%;
+  width: fit-content;
   position: absolute;
   top: 120%;
   left: -13%;
   display: flex;
   flex-direction: column;
   border-radius: 14px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--color-bg-tertiary);
   border: 1px solid var(--color-border-secondary);
 
@@ -1055,6 +1056,7 @@ header {
 .modal-profile-toggle a:nth-child(1) {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 5px;
 }
 
