@@ -121,3 +121,54 @@ $(".user-info-toggle").click(function () {
 });
 
 // end modal hover
+
+// start report flow overview
+
+const reportFlowOverviewText = [
+  {
+    number: "01",
+    title: "Snap & Tag",
+    description:
+      "Take a photo or quick audio of the issue and provide the street location.",
+  },
+  {
+    number: "02",
+    title: "Report Review",
+    description:
+      "Our team verifies evidence and routes directly to the responsible bureau.",
+  },
+  {
+    number: "03",
+    title: "Field Fix",
+    description:
+      "Dispatched technicians do the repairs under strict public SLA windows.",
+  },
+  {
+    number: "04",
+    title: "Proof & Close",
+    description:
+      "Before/after photos published openly so everyone sees the resolution.",
+  },
+];
+
+const generateReportFlowOverviewCard = (data) => {
+  const { number, title, description } = data;
+
+  $(".report-flow-review").append(
+    `<div class="small-card">
+          <div class="circ-box">${number}</div>
+          <div>
+            <p class="title">${title}</p>
+            <p class="description">
+              ${description}
+            </p>
+          </div>
+        </div>`,
+  );
+};
+
+reportFlowOverviewText.map((data) => {
+  generateReportFlowOverviewCard(data);
+});
+
+// end report flow overview
