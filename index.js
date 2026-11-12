@@ -87,3 +87,35 @@ $(document).on("click", "#close-modal-nav", function () {
   $("body").css("overflow", "visible");
   $("#modal-nav").remove();
 });
+
+// start modal hover
+
+const generateModalProfile = () => {
+  $(".user-info-toggle").append(`
+      <div id="modal-profile" class="modal-profile-toggle">
+          <a href="/profile.html">
+            <span>Fahrul Septiana</span>
+            <span>fahrul@wargareport.id</span>
+          </a>
+          <a href="/my-reports.html">
+            <div class="profile-icon"></div>
+            <span>My Filed Reports</span>
+          </a>
+          <a>
+            <div class="logout-icon"></div>
+            <span>Sign Out</span>
+          </a>
+      </div>
+  `);
+};
+
+$(".user-info-toggle").click(function () {
+  const modal = $("#modal-profile");
+  if (modal[0]) {
+    modal.remove();
+  } else {
+    generateModalProfile();
+  }
+});
+
+// end modal hover
