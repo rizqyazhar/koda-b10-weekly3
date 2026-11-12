@@ -25,6 +25,62 @@ const reportFlowOverviewText = [
   },
 ];
 
+const recentCommunityReportCardData = [
+  {
+    srcImg: "/img/img/img-1.jpg",
+    altImg: "img-1",
+    variantTag: "inreview-tag",
+    srcIconTag: "/img/icons/search-icon.svg",
+    altIconTag: "search-icon",
+    textTag: "In review",
+    codeReport: "CMP-2026-8841",
+    titleReport:
+      "PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT",
+    address: "Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)",
+    numberOfUpVote: 148,
+  },
+  {
+    srcImg: "/img/img/img-2.jpg",
+    altImg: "img-3",
+    variantTag: "assigned-tag",
+    srcIconTag: "/img/icons/asigned-icon.svg",
+    altIconTag: "assigned-icon",
+    textTag: "Assigned",
+    codeReport: "CMP-2026-8819",
+    titleReport:
+      "Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage",
+    address:
+      "Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)",
+    numberOfUpVote: 92,
+  },
+  {
+    srcImg: "/img/img/img-3.jpg",
+    altImg: "img-3",
+    variantTag: "resolved-tag",
+    srcIconTag: "/img/icons/check-icon.svg",
+    altIconTag: "check-icon",
+    textTag: "Resolved",
+    codeReport: "CMP-2026-8794",
+    titleReport:
+      "Complete PJU streetlight outage spanning 300 meters along residential corridor",
+    address: "Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03",
+    numberOfUpVote: 64,
+  },
+  {
+    srcImg: "/img/img/img-4.jpg",
+    altImg: "img-4",
+    variantTag: "inreview-tag",
+    srcIconTag: "/img/icons/search-icon.svg",
+    altIconTag: "search-icon",
+    textTag: "In review",
+    codeReport: "CMP-2026-8720",
+    titleReport:
+      "Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang",
+    address: "Kampung Kemang, RT 02 / RW 01 (bantara Kali Krukut)",
+    numberOfUpVote: 78,
+  },
+];
+
 const generateModalNav = () => {
   $("body").append(`
   <div id="modal-nav" class="absolute z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
@@ -172,3 +228,64 @@ reportFlowOverviewText.map((data) => {
 });
 
 // end report flow overview
+
+// start recent recent community report card
+
+const generateRecentCommunityReportCard = (data) => {
+  const {
+    srcImg,
+    altImg,
+    variantTag,
+    srcIconTag,
+    altIconTag,
+    textTag,
+    codeReport,
+    titleReport,
+    address,
+    numberOfUpVote,
+  } = data;
+
+  $(".recent-community-report-card-box").append(
+    `<div class="medium-card">
+            <div class="img-box">
+              <img src=${srcImg} alt=${altImg} />
+            </div>
+            <div class="medium-card-text-box">
+              <div class="note-report">
+                <span class="tag ${variantTag}">
+                  <img src=${srcIconTag} alt=${altIconTag} />
+                  ${textTag}
+                </span>
+                <span class="note-text">${codeReport}</span>
+              </div>
+              <p class="title-report title">
+                ${titleReport}
+              </p>
+              <div class="map-report-box">
+                <img src="/img/icons/location-icon.svg" alt="location-icon" />
+                <p class="map-report description">
+                  ${address}
+                </p>
+              </div>
+              <div class="space-between-btn-box">
+                <button class="button btn-like">
+                  <span
+                    ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                  /></span>
+                  ${numberOfUpVote}
+                </button>
+                <a class="btn-nav">
+                  Inspect
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>`,
+  );
+};
+
+recentCommunityReportCardData.map((data) => {
+  generateRecentCommunityReportCard(data);
+});
+
+// end recent recent community report card
