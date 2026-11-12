@@ -409,7 +409,7 @@ const generateFeedContentCard = (data) => {
     numberOfUpVote,
   } = data;
 
-  $("#feed-contents").append(
+  $(".feed-contents").append(
     `<div class="long-card">
                 ${
                   srcImg &&
@@ -466,8 +466,8 @@ const generateFeedContentCard = (data) => {
   );
 };
 
-// communityReportData.map((data) => {
-//   generateFeedContentCard(data);
-// });
+communityReportData.map((data) => {
+  generateFeedContentCard(data);
+});
 
 // end feed content card
