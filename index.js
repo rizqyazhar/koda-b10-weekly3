@@ -25,7 +25,7 @@ const reportFlowOverviewText = [
   },
 ];
 
-const recentCommunityReportCardData = [
+const communityReportData = [
   {
     srcImg: "/img/img/img-1.jpg",
     altImg: "img-1",
@@ -37,6 +37,10 @@ const recentCommunityReportCardData = [
     titleReport:
       "PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT",
     address: "Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)",
+    relevantOfficer: "Perumda PAM JAYA (Clean Drinking Water)",
+    problemCategory: "Water & Sewage",
+    reportDate: "Oct 29",
+    numberOfProof: 2,
     numberOfUpVote: 148,
   },
   {
@@ -51,6 +55,10 @@ const recentCommunityReportCardData = [
       "Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage",
     address:
       "Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)",
+    relevantOfficer: "Dinas Bina Marga DKI Jakarta (Roads & Sidewalks)",
+    problemCategory: "Roads & Transit",
+    reportDate: "Oct 28",
+    numberOfProof: 1,
     numberOfUpVote: 92,
   },
   {
@@ -64,6 +72,10 @@ const recentCommunityReportCardData = [
     titleReport:
       "Complete PJU streetlight outage spanning 300 meters along residential corridor",
     address: "Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03",
+    relevantOfficer: "Dinas Perhubungan DKI Jakarta (PJU & Traffic)",
+    problemCategory: "Street Lighting",
+    reportDate: "Oct 28",
+    numberOfProof: 1,
     numberOfUpVote: 64,
   },
   {
@@ -77,7 +89,45 @@ const recentCommunityReportCardData = [
     titleReport:
       "Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang",
     address: "Kampung Kemang, RT 02 / RW 01 (bantara Kali Krukut)",
+    relevantOfficer: "Dinas Lingkungan Hidup DKI Jakarta (Waste & Rivers)",
+    problemCategory: "Sanitation & Waste",
+    reportDate: "Oct 29",
+    numberOfProof: 1,
     numberOfUpVote: 78,
+  },
+  {
+    srcImg: "/img/img/img-5.png",
+    altImg: "img-5",
+    variantTag: "assigned-tag",
+    srcIconTag: "/img/icons/asigned-icon.svg",
+    altIconTag: "asigned-icon",
+    textTag: "Assigned",
+    codeReport: "CMP-2026-8650",
+    titleReport:
+      "Hazardous decayed Trembesi tree limb at risk of collapse over walking path",
+    address: "Taman Suropati (sisi timur, dekat patung ASEAN)",
+    relevantOfficer: "Dinas Pertamanan dan Hutan Kota DKI Jakarta",
+    problemCategory: "Public Parks & Trees",
+    reportDate: "Oct 28",
+    numberOfProof: 2,
+    numberOfUpVote: 45,
+  },
+  {
+    srcImg: "",
+    altImg: "",
+    variantTag: "submitted-tag",
+    srcIconTag: "/img/icons/time-icon.svg",
+    altIconTag: "time-icon",
+    textTag: "Submitted",
+    codeReport: "CMP-2026-8601",
+    titleReport:
+      "Heavy excavation equipment operating past 22:00 WIB in residential alley",
+    address: "Jl. Senopati No. 18, RT 06 / RW 02",
+    relevantOfficer: "Satpol PP Provinsi DKI Jakarta (Public Order)",
+    problemCategory: "Noise & Disturbance",
+    reportDate: "Oct 29",
+    numberOfProof: 1,
+    numberOfUpVote: 39,
   },
 ];
 
@@ -284,7 +334,7 @@ const generateRecentCommunityReportCard = (data) => {
   );
 };
 
-recentCommunityReportCardData.map((data) => {
+communityReportData.map((data) => {
   generateRecentCommunityReportCard(data);
 });
 
@@ -338,3 +388,86 @@ accordion.forEach((item) => {
 });
 
 // end accordion
+
+// start feed content card
+
+const generateFeedContentCard = (data) => {
+  const {
+    srcImg,
+    altImg,
+    variantTag,
+    srcIconTag,
+    altIconTag,
+    textTag,
+    codeReport,
+    titleReport,
+    address,
+    relevantOfficer,
+    problemCategory,
+    reportDate,
+    numberOfProof,
+    numberOfUpVote,
+  } = data;
+
+  $("#feed-contents").append(
+    `<div class="long-card">
+                ${
+                  srcImg &&
+                  `<div class="img-long-card-box">
+                  <img src=${srcImg} alt=${altImg} />
+                </div>`
+                }
+                <div class="long-card-texts">
+                  <div class="note-report">
+                    <span class="tag ${variantTag}">
+                      <img src=${srcIconTag} alt=${altIconTag} />
+                      ${textTag}
+                    </span>
+                    <span class="note-text">${codeReport}</span>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="department-name"
+                      >${relevantOfficer}</span
+                    >
+                  </div>
+                  <p class="title">
+                    ${titleReport}
+                  </p>
+                  <div class="map-report-box">
+                    <div class="location-icon"></div>
+                    <p class="map-report description">
+                      ${address}
+                    </p>
+                    <span class="middle-dot">&#xb7;</span>
+                    <span class="map-report">${problemCategory}</span>
+                  </div>
+                </div>
+                <div class="long-card-actions">
+                  <button class="button btn-like">
+                    <span
+                      ><img src="/img/icons/like-icon.svg" alt="like-icon"
+                    /></span>
+                    ${numberOfUpVote}
+                  </button>
+                  <span class="proof-number">
+                    <img src="/img/icons/report-icon.svg" alt="report-icon" />
+                    ${numberOfProof} proof
+                  </span>
+                  <span class="report-date">${reportDate}</span>
+                  <a class="btn-nav">
+                    Track
+                    <span class="proof-number">
+                      <img
+                        src="/img/icons/arrow-right-icon-green.svg"
+                        alt="arrow-right-icon-green" />
+                    </span>
+                  </a>
+                </div>
+              </div>`,
+  );
+};
+
+// communityReportData.map((data) => {
+//   generateFeedContentCard(data);
+// });
+
+// end feed content card
