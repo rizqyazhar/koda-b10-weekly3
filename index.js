@@ -53,10 +53,10 @@ const generateModalNavLoggedIn = () => {
             </div>
           </div>
           <div class="flex items-center justify-center gap-5">
-            <div class="notif-icon-box">
+            <a href="/notification.html" class="notif-icon-box">
               <div class="notif-icon"></div>
               <div class="green-circle"></div>
-            </div>
+            </a>
             <button class="button button-primary">
               <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
               Report
