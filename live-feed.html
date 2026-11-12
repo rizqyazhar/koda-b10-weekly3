@@ -6,27 +6,63 @@
     <title>Live Feed | WargaReport</title>
     <link rel="icon" type="image/x-icon" href="/img/icons/logo.svg" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"></script>
+    <script src="/index.js" defer></script>
   </head>
   <body>
-    <header class="navbar padding-inline">
-      <div class="logo-box">
-        <img src="/img/icons/logo.svg" alt="web-logo" />
-        <a href="/index.html">WargaReport</a>
+    <header>
+      <div class="navbar-primary padding-inline">
+        <div class="logo-box">
+          <img src="/img/icons/logo.svg" alt="web-logo" />
+          <a href="/index.html">WargaReport</a>
+        </div>
+        <nav class="nav-links">
+          <a href="/live-feed.html" class="active-state capsul">Live Feed</a>
+          <a href="/track.html" class="inactive-state">Track</a>
+          <a href="/help.html" class="inactive-state">How it works</a>
+        </nav>
+        <div class="buttons-box">
+          <a href="/login.html" class="button button-secondary">
+            <img src="/img/icons/login-icon.svg" alt="/login-icon" />
+            Sign In
+          </a>
+          <button class="button button-primary">
+            <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
+            Report
+          </button>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="/live-feed.html" class="active-state capsul">Live Feed</a>
-        <a href="/track.html" class="inactive-state">Track</a>
-        <a href="/help.html" class="inactive-state">How it works</a>
-      </nav>
-      <div class="buttons-box">
-        <a href="/login.html" class="button button-secondary">
-          <img src="/img/icons/login-icon.svg" alt="/login-icon" />
-          Sign In
-        </a>
-        <button class="button button-primary">
-          <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
-          Report
-        </button>
+      <div class="navbar-secondary">
+        <nav class="padding-inline">
+          <div class="logo-box">
+            <img src="/img/icons/logo.svg" alt="web-logo" />
+            <a href="/index.html">WargaReport</a>
+          </div>
+          <div class="button-toggle-nav-box">
+            <button id="open-modal-nav">
+              <svg
+                class="menu-open"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu preview-icon">
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+              </svg>
+            </button>
+          </div>
+        </nav>
       </div>
     </header>
     <main class="main padding-inline">
