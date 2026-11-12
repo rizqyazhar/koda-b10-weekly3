@@ -25,6 +25,7 @@ const generateModalNav = () => {
       </div>
     </div>
   `);
+  return;
 };
 
 const generateModalNavLoggedIn = () => {
@@ -107,6 +108,7 @@ const generateModalProfile = () => {
           </a>
       </div>
   `);
+  return;
 };
 
 $(".user-info-toggle").click(function () {
