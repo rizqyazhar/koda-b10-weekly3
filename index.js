@@ -702,6 +702,7 @@ $(document).on("click", "#open-auth-modal-mobile", function () {
 
 $(document).on("click", ".open-login-modal", function () {
   $("#modal-register").remove();
+  generateModalLogin();
 });
 
 $(document).on("click", ".open-register-modal", function () {
