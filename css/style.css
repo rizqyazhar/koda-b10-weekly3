@@ -53,7 +53,6 @@ body {
   position: relative;
   width: 100%;
   background-color: var(--color-bg-secondary);
-  /* overflow: hidden; */
 }
 
 .padding-inline {
@@ -329,9 +328,10 @@ a {
 .eye-icon {
   width: 16px;
   height: 16px;
-  background-color: var(--color-font-tertiary);
-  mask: url("/img/icons/eye-icon.svg") no-repeat center;
-  mask-size: cover;
+}
+
+.eye-icon > img {
+  color: var(--color-font-tertiary);
 }
 
 .profile-icon {
@@ -568,11 +568,13 @@ a {
   z-index: 20;
   width: 100%;
   height: 100%;
-  inset: 0;
+  top: 0;
+  inset-inline: 0;
   background-color: rgba(19, 35, 27, 0.55);
 }
 
 .overlay > div {
+  position: fixed;
   width: 100%;
   min-height: 100dvh;
   display: flex;
@@ -693,7 +695,7 @@ body.modal-open {
   }
 }
 
-.button-toggle-login-register a {
+.button-toggle-login-register button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -933,8 +935,6 @@ header {
 }
 
 .button {
-  width: fit-content;
-  height: fit-content;
   border: none;
   outline: none;
   display: flex;

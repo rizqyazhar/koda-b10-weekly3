@@ -146,10 +146,10 @@ const generateModalNav = () => {
           <a href="/help.html" class="pl-5 py-5 text-sm font-[500] text-[rgba(76,91,82,1)] border-b border-[rgba(215,203,182,1)]">How it works</a>
         </div>
         <div class="mt-10 w-full flex items-center justify-center gap-3">
-          <a href="/login.html" class="button button-secondary">
+          <button id="open-login-modal" class="button button-secondary">
             <img src="/img/icons/login-icon.svg" alt="/login-icon" />
             Sign In
-          </a>
+          </button>
           <button class="button button-primary">
             <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
             Report
@@ -205,11 +205,6 @@ const generateModalNavLoggedIn = () => {
 $("#open-modal-nav-logged-in").click(function () {
   $("body").css("overflow", "hidden");
   generateModalNavLoggedIn($(this));
-});
-
-$(document).on("click", "#close-modal-nav", function () {
-  $("body").css("overflow", "visible");
-  $("#modal-nav").remove();
 });
 
 $("#open-modal-nav").click(function () {
@@ -471,3 +466,258 @@ communityReportData.map((data) => {
 });
 
 // end feed content card
+
+// start login-register modal
+
+const generateModalLogin = () => {
+  $("body").append(`
+      <div id="modal-login" class="overlay">
+  <div>
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <p class="title">Sign In to WargaReport</p>
+          <p class="description">
+            Sign in to lodge a complaint or upvote issues.
+          </p>
+        </div>
+        <button id="close-login-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x preview-icon">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="button-toggle-login-register">
+          <button class="open-login-modal toggle-active">
+            Sign In Existing Account
+          </button>
+          <button class="open-register-modal toggle-inactive">
+            Register as Citizen
+          </button>
+        </div>
+        <form>
+          <div class="input-container">
+            <label for="email-input" class="input-label">
+              <span class="eyebrow-heading">Email Address</span>
+            </label>
+            <div class="input-box">
+              <div class="mail-icon-primary"></div>
+              <input
+                id="email-input"
+                class="input"
+                type="email"
+                placeholder="Enter your Email"
+                required />
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="password-input" class="input-label">
+              <span class="eyebrow-heading">Password</span>
+            </label>
+            <div class="input-box">
+              <div class="lock-icon"></div>
+              <div class="input-with-button">
+                <input
+                  id="password-input"
+                  class="input"
+                  type="password"
+                  placeholder="Enter your Password" 
+                  auto-complete="off"
+                  required />
+                <button id="show-password-toggle" type="button" class="eye-icon">
+                  <img src="/img/icons/eye-on-icon.svg" alt="eye-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button text-[rgba(255,255,255,1)] bg-[rgba(15,107,79,1)]">
+            Sign In
+            <img
+              src="/img/icons/arrow-right-white.svg"
+              alt="arrow-right-white" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    `);
+};
+
+const generateModalRegister = () => {
+  $("body").append(`
+    <div id="modal-register" class="overlay">
+  <div>
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <p class="title">Register Citizen Account</p>
+          <p class="description">
+            Sign in to lodge a complaint or upvote issues.
+          </p>
+        </div>
+        <button id="close-login-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x preview-icon">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="button-toggle-login-register">
+          <button class="open-login-modal toggle-inactive">
+            Sign In Existing Account
+          </button>
+          <button class="open-register-modal toggle-active">
+            Register as Citizen
+          </button>
+        </div>
+        <form>
+          <div class="input-container">
+            <label for="fullname-input" class="input-label">
+              <span class="eyebrow-heading">Full Name (Nama Lengkap) *</span>
+            </label>
+            <div class="input-box">
+              <div class="profile-icon"></div>
+              <input
+                id="fullname-input"
+                class="input"
+                type="text"
+                placeholder="e.g. Budi Santoso"
+                required />
+            </div>
+          </div>
+          <div class="input-2-column">
+            <div class="input-container">
+              <label for="email-input" class="input-label">
+                <span class="eyebrow-heading">Email Address *</span>
+              </label>
+              <div class="input-box">
+                <input
+                  id="email-input"
+                  class="input"
+                  type="email"
+                  placeholder="e.g. budi@wargareport.id"
+                  required />
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="contact-input" class="input-label">
+                <span class="eyebrow-heading">Phone / WhatsApp *</span>
+              </label>
+              <div class="input-box">
+                <input
+                  id="contact-input"
+                  class="input"
+                  type="text"
+                  placeholder="+62 812-..."
+                  required />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="input-container">
+              <label for="nik-input" class="input-label">
+                <span class="eyebrow-heading">NIK</span>
+              </label>
+              <div class="input-box">
+                <input
+                  id="nik-input"
+                  class="input"
+                  type="text"
+                  placeholder="16 digits for verified resident badge (e.g. 3174...)" />
+              </div>
+            </div>
+            <small class="small">
+              Used exclusively for verification under UU PDP and never shown to
+              the public.
+            </small>
+          </div>
+          <div class="input-container">
+            <label for="password-input" class="input-label">
+              <span class="eyebrow-heading">Password</span>
+            </label>
+            <div class="input-box">
+              <div class="lock-icon"></div>
+              <div class="input-with-button">
+                <input
+                  id="password-input"
+                  class="input"
+                  type="password"
+                  placeholder="Create a Password"
+                  auto-complete="off"
+                  required />
+                <button id="show-password-toggle" type="button" class="eye-icon">
+                  <img src="/img/icons/eye-on-icon.svg" alt="eye-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <a
+            href="login.html"
+            class="button text-[rgba(255,255,255,1)] bg-[rgba(15,107,79,1)]">
+            <div class="check-icon"></div>
+            Create Account & Continue
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  
+  `);
+};
+
+$("#open-login-modal").click(function () {
+  $("body").css("overflow", "hidden");
+  generateModalLogin();
+});
+
+$(document).on("click", ".open-login-modal", function () {
+  $("#modal-register").remove();
+  generateModalLogin();
+});
+
+$(document).on("click", ".open-register-modal", function () {
+  $("#modal-login").remove();
+  generateModalRegister();
+});
+
+$(document).on("click", "#close-login-modal", function () {
+  $("body").css("overflow", "visible");
+  $(".overlay").remove();
+});
+
+$(document).on("click", "#show-password-toggle", function () {
+  if ($("#password-input").attr("type") === "password") {
+    $("#password-input").attr("type", "text");
+    $(this).find("img").attr("src", "/img/icons/eye-off-icon.svg");
+  } else {
+    $("#password-input").attr("type", "password");
+    $(this).find("img").attr("src", "/img/icons/eye-on-icon.svg");
+  }
+});
+
+// end login-register modal
