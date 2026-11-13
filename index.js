@@ -163,9 +163,30 @@ function getRegisterFormData(targetElement) {
 
 // end function get data from register form
 
+// start function login
+
+function login(targetElement) {
+  targetElement?.addEventListener("submit", (e) => {
+    const loginFormData = new FormData(e.target);
+
+    const emailLogin = loginFormData.get("email");
+    const passwordLogin = loginFormData.get("password");
+
+    if (!userAuth.length) return null;
+
+    const findUser = userAuth.find((user) => user.email === emailLogin);
+
+    if (!findUser) return null;
+
+    window.location.href("/topic-report-issue.html");
+  });
+}
+
+// end function login
+
 const generateModalNav = () => {
   $("body").append(`
-  <div id="modal-nav" class="absolute z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
+  <div id="modal-nav" class="fixed z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
       <div class="w-1/2 h-full flex flex-col bg-[rgba(255,253,248,1)]">
         <div class="flex flex-row-reverse p-5">
            <button id="close-modal-nav" class="cursor-pointer">
@@ -195,7 +216,7 @@ const generateModalNav = () => {
 
 const generateModalNavLoggedIn = () => {
   $("body").append(`
-  <div id="modal-nav" class="absolute z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
+  <div id="modal-nav" class="fixed z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
       <div class="w-1/2 h-full flex flex-col bg-[rgba(255,253,248,1)]">
         <div class="flex flex-row-reverse p-5">
            <button id="close-modal-nav" class="cursor-pointer">
@@ -539,7 +560,7 @@ const generateModalLogin = () => {
             Register as Citizen
           </button>
         </div>
-        <form>
+        <form id="login-form">
           <div class="input-container">
             <label for="email-input" class="input-label">
               <span class="eyebrow-heading">Email Address</span>
@@ -550,6 +571,7 @@ const generateModalLogin = () => {
                 id="email-input"
                 class="input"
                 type="email"
+                name="email"
                 placeholder="Enter your Email"
                 required />
             </div>
@@ -565,6 +587,7 @@ const generateModalLogin = () => {
                   id="password-input"
                   class="input"
                   type="password"
+                  name="password"
                   placeholder="Enter your Password" 
                   auto-complete="off"
                   required />
@@ -574,7 +597,7 @@ const generateModalLogin = () => {
               </div>
             </div>
           </div>
-          <button
+          <button type="submit"
             class="button text-[rgba(255,255,255,1)] bg-[rgba(15,107,79,1)]">
             Sign In
             <img
