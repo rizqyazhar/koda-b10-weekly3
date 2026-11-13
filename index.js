@@ -372,7 +372,7 @@ const generateRecentCommunityReportCard = (data) => {
                   /></span>
                   ${numberOfUpVote}
                 </button>
-                <a class="btn-nav">
+                <a href="/detail-report.html" class="btn-nav">
                   Inspect
                   <span>&rarr;</span>
                 </a>

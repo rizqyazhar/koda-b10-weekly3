@@ -7,30 +7,33 @@
     <link rel="icon" type="image/x-icon" href="/img/icons/logo.svg" />
     <link rel="stylesheet" href="/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"></script>
     <script src="/index.js" defer></script>
   </head>
   <body>
     <header>
       <div class="navbar-primary padding-inline">
         <div class="logo-box">
-        <img src="/img/icons/logo.svg" alt="web-logo" />
-        <a href="/index.html">WargaReport</a>
+          <img src="/img/icons/logo.svg" alt="web-logo" />
+          <a href="/index.html">WargaReport</a>
         </div>
         <nav class="nav-links">
-        <a href="/live-feed.html" class="inactive-state">Live Feed</a>
-        <a href="/track.html" class="inactive-state">Track</a>
-        <a href="/help.html" class="inactive-state">How it works</a>
+          <a href="/live-feed.html" class="inactive-state">Live Feed</a>
+          <a href="/track.html" class="inactive-state">Track</a>
+          <a href="/help.html" class="inactive-state">How it works</a>
         </nav>
         <div class="buttons-box">
-        <button id="open-auth-modal" class="button button-secondary">
-          <img src="/img/icons/login-icon.svg" alt="/login-icon" />
-          Sign In
-        </button>
-        <button class="button button-primary">
-          <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
-          Report
-        </button>
+          <button id="open-auth-modal" class="button button-secondary">
+            <img src="/img/icons/login-icon.svg" alt="/login-icon" />
+            Sign In
+          </button>
+          <button class="button button-primary">
+            <img src="/img/icons/plus-icon.svg" alt="/plus-icon" />
+            Report
+          </button>
         </div>
       </div>
       <div class="navbar-secondary">
@@ -41,7 +44,22 @@
           </div>
           <div class="button-toggle-nav-box">
             <button id="open-modal-nav">
-              <svg class="menu-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+              <svg
+                class="menu-open"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu preview-icon">
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+              </svg>
             </button>
           </div>
         </nav>
@@ -64,12 +82,15 @@
           </p>
         </div>
         <div class="hero-button-box">
-          <button class="button button-primary">
+          <a
+            href="/topic-report-issue.html"
+            id="snap-report"
+            class="button button-primary">
             <img src="/img/icons/camera-icon.svg" alt="camera-icon" />
             Snap a report
             <img src="/img/icons/arrow-right-white.svg" alt="camera-icon" />
-          </button>
-          <button class="button button-tertiary">Track a case</button>
+          </a>
+          <a href="/track.html" class="button button-tertiary">Track a case</a>
         </div>
         <div class="hero-data-reports">
           <p><span class="hero-data-number">48</span> reports today</p>
@@ -83,7 +104,7 @@
       <section class="recent-community-report-section">
         <div>
           <div>
-            <h2 class="title">Recent Community Reports</h3>
+            <h2 class="title">Recent Community Reports</h2>
             <p class="description">
               Verified reports lodged in Jakarta and surrounding regions
             </p>
