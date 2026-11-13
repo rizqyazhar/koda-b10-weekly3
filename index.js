@@ -501,7 +501,7 @@ const generateFeedContentCard = (data) => {
                     ${numberOfProof} proof
                   </span>
                   <span class="report-date">${reportDate}</span>
-                  <a class="btn-nav">
+                  <a href="/detail-report.html" class="btn-nav">
                     Track
                     <span class="proof-number">
                       <img
