@@ -131,6 +131,38 @@ const communityReportData = [
   },
 ];
 
+// start get data from local storage
+
+const userAuth = JSON.parse(window.localStorage.getItem("user-auth")) || [];
+
+// end get data from local storage
+
+// start function get data from register form
+
+function getRegisterFormData(targetElement) {
+  targetElement?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const registerFormData = new FormData(e.target);
+
+    const fullname = registerFormData.get("fullname");
+    const email = registerFormData.get("email");
+    const contact = registerFormData.get("contact");
+    const nik = registerFormData.get("nik");
+    const createPassword = registerFormData.get("create-password");
+
+    const data = { fullname, email, contact, nik, createPassword };
+
+    userAuth.push(data);
+
+    window.localStorage.setItem("user-auth", JSON.stringify(userAuth));
+
+    e.target.reset();
+    return data;
+  });
+}
+
+// end function get data from register form
+
 const generateModalNav = () => {
   $("body").append(`
   <div id="modal-nav" class="absolute z-50 inset-0 w-full min-h-dvh bg-black/30 flex flex-row-reverse">
@@ -595,7 +627,7 @@ const generateModalRegister = () => {
             Register as Citizen
           </button>
         </div>
-        <form>
+        <form id="register-form">
           <div class="input-container">
             <label for="fullname-input" class="input-label">
               <span class="eyebrow-heading">Full Name (Nama Lengkap) *</span>
@@ -606,6 +638,7 @@ const generateModalRegister = () => {
                 id="fullname-input"
                 class="input"
                 type="text"
+                name="fullname"
                 placeholder="e.g. Budi Santoso"
                 required />
             </div>
@@ -620,6 +653,7 @@ const generateModalRegister = () => {
                   id="email-input"
                   class="input"
                   type="email"
+                  name="email"
                   placeholder="e.g. budi@wargareport.id"
                   required />
               </div>
@@ -632,7 +666,8 @@ const generateModalRegister = () => {
                 <input
                   id="contact-input"
                   class="input"
-                  type="text"
+                  type="tel"
+                  name="contact"
                   placeholder="+62 812-..."
                   required />
               </div>
@@ -648,6 +683,7 @@ const generateModalRegister = () => {
                   id="nik-input"
                   class="input"
                   type="text"
+                  name="nik"
                   placeholder="16 digits for verified resident badge (e.g. 3174...)" />
               </div>
             </div>
@@ -667,6 +703,7 @@ const generateModalRegister = () => {
                   id="password-input"
                   class="input"
                   type="password"
+                  name="create-password"
                   placeholder="Create a Password"
                   auto-complete="off"
                   required />
@@ -676,12 +713,11 @@ const generateModalRegister = () => {
               </div>
             </div>
           </div>
-          <a
-            href="login.html"
+          <button type="submit"            
             class="button text-[rgba(255,255,255,1)] bg-[rgba(15,107,79,1)]">
             <div class="check-icon"></div>
             Create Account & Continue
-          </a>
+          </button>
         </form>
       </div>
     </div>
@@ -708,6 +744,10 @@ $(document).on("click", ".open-login-modal", function () {
 $(document).on("click", ".open-register-modal", function () {
   $("#modal-login").remove();
   generateModalRegister();
+
+  const registerForm = document.querySelector("#register-form");
+
+  getRegisterFormData(registerForm);
 });
 
 $(document).on("click", "#close-login-modal", function () {
