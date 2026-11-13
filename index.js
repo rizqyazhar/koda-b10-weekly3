@@ -329,7 +329,7 @@ const generateRecentCommunityReportCard = (data) => {
   );
 };
 
-communityReportData.map((data) => {
+communityReportData.slice(0, 4).map((data) => {
   generateRecentCommunityReportCard(data);
 });
 
