@@ -584,6 +584,9 @@ a {
     padding-top: 10%;
     align-items: start;
   }
+  @media (width <= 640px) {
+    padding-top: 5%;
+  }
 }
 
 body.modal-open {
@@ -664,6 +667,9 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media (width <= 768px) {
+    gap: 8px;
+  }
 }
 
 .input-2-column {
@@ -705,6 +711,10 @@ body.modal-open {
   font-weight: 500;
   font-size: 13px;
   font-family: var(--font-publicSans);
+  @media (width <= 768px) {
+    padding-block: 10px;
+    font-size: 10px;
+  }
 }
 
 .toggle-active {
