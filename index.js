@@ -146,7 +146,7 @@ const generateModalNav = () => {
           <a href="/help.html" class="pl-5 py-5 text-sm font-[500] text-[rgba(76,91,82,1)] border-b border-[rgba(215,203,182,1)]">How it works</a>
         </div>
         <div class="mt-10 w-full flex items-center justify-center gap-3">
-          <button id="open-login-modal" class="button button-secondary">
+          <button id="open-auth-modal-mobile" class="button button-secondary">
             <img src="/img/icons/login-icon.svg" alt="/login-icon" />
             Sign In
           </button>
@@ -690,14 +690,18 @@ const generateModalRegister = () => {
   `);
 };
 
-$("#open-login-modal").click(function () {
+$("#open-auth-modal").click(function () {
   $("body").css("overflow", "hidden");
+  generateModalLogin();
+});
+
+$(document).on("click", "#open-auth-modal-mobile", function () {
+  $("#modal-nav").remove();
   generateModalLogin();
 });
 
 $(document).on("click", ".open-login-modal", function () {
   $("#modal-register").remove();
-  generateModalLogin();
 });
 
 $(document).on("click", ".open-register-modal", function () {
